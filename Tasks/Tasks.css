@@ -105,18 +105,6 @@ ul {
     box-shadow: 0 0 10px grey
 }
 
-
-/* mobile */
-
-@media (max-width: 690px) {
-    .kanban-list {
-        display: block;
-    }
-    .kanban-column {
-        margin-bottom: 30px;
-    }
-}
-
 .drag {
     position: absolute;
     left: 11px;

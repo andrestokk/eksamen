@@ -1,0 +1,85 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="Eksamen.css">
+    <title>Eksamen</title>
+    <link rel="stylesheet" href="Eksamen.css">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+</head>
+
+<body>
+    <header>
+        <h1>Gruppe 26</h1>
+
+    </header>
+
+    <div class="kanban-container">
+        <ul class="kanban-list">
+            <li class="kanban-column kanban-column-onhold">
+                <span class="kanban-column-header header-onhold">
+            <h2>To Do</h2>
+          </span>
+                <div class="kanban-options"></div>
+                <ul class="drag-inner-list">
+                    <li class="drag-item" draggable="true">
+                        <input type="text " id="Text-Box" class="drag" value="">
+                    </li>
+
+            </li>
+            ¨¨
+
+            </ul>
+            </li>
+
+            <li class="kanban-column kanban-column-approved">
+                <span class="kanban-column-header header-approved">
+           
+                    <h2>Doing</h2>
+          </span>
+                <div class="kanban-options"></div>
+
+                <ul class="drag-inner-list">
+
+
+                </ul>
+            </li>
+            <li class="kanban-column kanban-column-approved">
+                <span class="kanban-column-header header-approved">
+           
+                    <h2>Done</h2>
+          </span>
+                <div class="kanban-options"></div>
+
+                <ul class="drag-inner-list">
+
+
+                </ul>
+            </li>
+
+        </ul>
+    </div>
+
+
+    <div class="sidebar">
+        <button class="menuBar">Menu</button>
+        <div class="dropdown-content">
+            <a href="Tasks.html" class="taskButton">Tasks</a>
+            <a href="Email.html" class="emailButton">Email</a>
+            <a href="contacts.html" class="contactButton">Contacts</a>
+            <a href="Settings.html" class="settingsButton">Settings</a>
+            <input type='text' placeholder='Search...' id='search-text-input' />
+            <div id='button-holder'>
+                <img src='magnifying.jpg' /></div>
+        </div>
+    </div>
+
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js"></script>
+    <script src="Eksamen.js"></script>
+</body>
+
+</html>

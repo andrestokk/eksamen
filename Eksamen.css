@@ -247,3 +247,13 @@ ul {
 .sidebar:hover .menuBar {
     background-color: #3e8e41;
 }
+
+.drag {
+    position: absolute;
+    left: 11px;
+    height: 100px;
+    width: 295px;
+    background-color: rgb(173, 173, 173);
+    font-size: 25px;
+    font-family: 'Verdana';
+}

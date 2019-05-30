@@ -101,13 +101,26 @@ ul {
 .nav a:hover{
     color: #334D6E;
     transition: 0.5s;
-    font-size: 110%;
+
 }
 
 .nav .close{
     position: absolute;
     top:0;
     right: 25px;
+    margin-left: 50px;
+    font-size: 30px;
 }
 
+.slide a{
+    positon: absolute;
+    color: red;
+    font-size: 30px;
+}
 
+#content{
+    padding: 20px;
+    transition: 0.8s;
+    overflow: hidden;
+    width: 100%;
+}

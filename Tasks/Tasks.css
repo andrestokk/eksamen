@@ -1,110 +1,77 @@
-* {
-    box-sizing: border-box;
-}
+/*Just some CSS to show that we can link it*/
 
 body {
-    background: #33363D;
-    color: white;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    line-height: 1.5;
+    background-color: #c2cfe0;
+}
+
+#welcome-message {
     text-align: center;
-    -webkit-font-smoothing: antialiased;
+    color: black;
 }
 
-h1 {
-    font-size: 40px;
-    font-weight: 500;
-    letter-spacing: 1px;
-}
-
-h2 {
-    font-size: 16px;
-    margin: 0;
-    text-transform: uppercase;
-    font-weight: 400;
-    left: 50%;
-}
-
-h4 {
-    font-size: 18px;
-}
-
-a {
-    color: #00BCD4;
-    font-weight: 500;
-    text-decoration: none;
-}
-
-header {
-    padding: 20px;
+#project-name {
     text-align: center;
+    color: rgb(255, 255, 255);
 }
 
-.kanban-container {
-    margin: 10px auto;
-    max-width: 1000px;
+.task-container {
+    min-height: 100px;
+}
+
+#project-name-errormessage {
+    color: red;
+    font-style: italic;
+}
+
+#task-errormessage {
+    color: red;
+    font-style: italic;
 }
 
 ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
+    min-height: 800px;
 }
 
-.kanban-list {
-    display: flex;
-    align-items: flex-start;
+.task-desc {
+    display: none;
+    text-align: center;
+    word-wrap: break-word;
 }
 
-.kanban-column {
-    flex: 1;
-    margin: 0 10px;
-    position: relative;
-    background: rgba(0, 0, 0, 0.2);
-    overflow: hidden;
+.task-point {
+    text-align: center;
+    margin: 0;
 }
 
-.kanban-column-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px;
-}
-
-.header-onhold {
-    background: #FF9800;
-}
-
-.header-inprogress {
-    background: #009688;
-}
-
-.header-approved {
-    background: rgb(125, 230, 6);
-}
-
-.header-doing {
-    background: rgb(6, 77, 230);
-}
-
-.drag-inner-list {
-    min-height: 50px;
-}
-
-.drag-item {
-    margin: 10px;
+#input-task-desc {
     height: 100px;
-    background: rgba(0, 0, 0, 0.4);
+    text-align: left;
 }
 
-.drag-item:active {
-    color: white;
+.delete-task-button {
+    float: right;
+    font-size: 20px;
+    margin: 0px 15px 0px 0px;
 }
 
+.delete-task-button:hover {
+    cursor: pointer;
+}
 
-/* micro-interactions */
+.done-task {
+    background-color: #31D843;
+}
 
-.drop-zone-active {
-    border-color: grey;
-    box-shadow: 0 0 10px grey
+.task-cards {
+    background-color: rgb(255, 255, 255);
+    border-style: solid;
+}
+
+#task-modal {
+    background-color: #f0f0f0;
+    height: 20%;
+    width: 50px;
+    border-radius: 2px;
 }

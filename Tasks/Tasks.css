@@ -89,21 +89,32 @@ ul {
 
 .buttonicon div{
     background-color:red;
-    border-radius: 1px;
+    border-radius: 5px;
     height: 6px;
     width: 30px;
     margin: 3px 0;
 }
 
 nav{
-    background-color: #C2CFE0;
+    background-color:#C2CFE0;
     display: inline-block;
-    position: fixed;
-    height: 100px;
+    position: absolute;
+    top:0;
+    height: 100%;
     width: 225px;
     left: -225px;
     -webkit-transition: -webkit-transform 0.3s;
     transition: transform 0.3s;
+}
+
+nav .logo img{
+border-radius: 50%;
+box-sizing: border-box;
+}
+
+nav .logo{
+    margin: 10px 0;
+    text-align: center;
 }
 
 nav a{

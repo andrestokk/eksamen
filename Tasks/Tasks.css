@@ -83,11 +83,25 @@ ul {
     position: fixed;
     top: 0;
     left: 0;
-    background-color: red;
+    background-color: #C2CFE0;
     overflow-x: hidden;
     padding-top: 60px;
+    transition: 0.8s;
+    box-shadow: 2px 0 30px rgb(133, 137, 143);
 }
     
+.nav a{
+    display: block;
+    padding: 20px 30px;
+    text-align: center;
+    text-decoration: none;
 
+}
+
+.nav a:hover{
+    color: #334D6E;
+    transition: 0.5s;
+    font-size: 110%;
+}
 
 

@@ -88,7 +88,7 @@ ul {
 }
 
 .buttonicon div{
-    background-color:red;
+    background-color:#334D6E;
     border-radius: 5px;
     height: 6px;
     width: 30px;
@@ -105,6 +105,7 @@ nav{
     left: -225px;
     -webkit-transition: -webkit-transform 0.3s;
     transition: transform 0.3s;
+    box-shadow: 1px 10px 30px rgb(123, 149, 153);
 }
 
 nav .logo img{
@@ -126,7 +127,7 @@ nav a{
 }
 
 nav a:hover{
-    color: red;
+    color: rgb(17, 104, 131);
 }
 
 nav, .buttonicon{

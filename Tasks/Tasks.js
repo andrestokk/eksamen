@@ -264,7 +264,7 @@ $(function() {
     })
 })
 
-function toggleSidenav() {
+function toggleSidebar() {
       document.body.classList.toggle('sidenav-active');
     }
     

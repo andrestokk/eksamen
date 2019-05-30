@@ -1,8 +1,12 @@
 export class Task {
-    id;
-    name;
+    id
+    name
+    description
+    status
+    deadline
+    members
 
     printName = function() {
-         console.log(this.name);
+         console.log(this.name)
     }
 }

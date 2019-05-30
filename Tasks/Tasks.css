@@ -92,10 +92,9 @@ ul {
     
 .nav a{
     display: block;
-    padding: 20px 30px;
+    padding: 25px 10px;
     text-align: center;
     text-decoration: none;
-
 }
 
 .nav a:hover{
@@ -113,7 +112,8 @@ ul {
 }
 
 .slide a{
-    positon: absolute;
+    position: absolute;
+    top: 20px;
     color: red;
     font-size: 30px;
 }

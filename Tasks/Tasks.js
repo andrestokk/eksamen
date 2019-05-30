@@ -163,7 +163,6 @@ $(function() {
 
     })
 });
-
 $(function() {
     $("#open-task-modal-button").css({
         "border-radius": "100%",
@@ -174,14 +173,16 @@ $(function() {
         "font-size": "35px",
         "margin": "0",
         "padding": "0",
-        "text-align": "center",
-        "backgroundColor": "white",
+
+
         "border": "0",
 
 
 
     })
 });
+
+
 
 function cardStyle() {
     $(".task-cards").css({

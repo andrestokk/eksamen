@@ -8,6 +8,7 @@
     <title>Kanban!</title>
     <link rel="stylesheet" href="jquery-3.3.1.min.js" type="text/css">
     <link rel="stylesheet" href="Tasks.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -33,7 +34,7 @@
         <div id="backlog-container" class="task-container connectedSortable">
             <!-- START OF BACKLOG CONTAINER-->
             <h3 class="container-names">To-do</h3>
-            <input id="open-task-modal-button" type="button" value="+">
+            <input id="open-task-modal-button" type="button" src="pluss.png">
             <ul id="backlog-list" class="connectedSortable"></ul>
             <div id="task-modal" title="">
                 <h3 id="hearder-newCard"> Enter the fields below to create a new task</h3>
@@ -42,7 +43,7 @@
                 <input id="input-task-point" class="task-fields" type="email" placeholder="Email or username">
                 <input id="task-modal-button" type="button" value="add task">
                 <p id="task-errormessage"></p>
-                <input id="open-task-modal-button" type="button" value="+">
+
             </div>
 
 

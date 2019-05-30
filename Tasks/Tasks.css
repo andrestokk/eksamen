@@ -101,10 +101,10 @@ nav{
     position: absolute;
     top:0;
     height: 100%;
-    width: 225px;
-    left: -225px;
-    -webkit-transition: -webkit-transform 0.3s;
-    transition: transform 0.3s;
+    width: 250px;
+    left: -250px;
+    -webkit-transition: -webkit-transform 0.4s;
+    transition: transform 0.4s;
     box-shadow: 1px 10px 30px rgb(123, 149, 153);
 }
 
@@ -116,14 +116,15 @@ box-sizing: border-box;
 nav .logo{
     margin: 10px 0;
     text-align: center;
+    height: 200px;
 }
 
 nav a{
     display: block;
+    font-size: 20px;
     text-decoration: none;
-    text-align: center;
     color: #334D6E;
-    padding: 5px 0;
+    padding: 10px 30px;
 }
 
 nav a:hover{
@@ -131,14 +132,12 @@ nav a:hover{
 }
 
 nav, .buttonicon{
-    -webkit-transition: -webkit-transform .3s;
-    transition: transform .3s;
+    -webkit-transition: -webkit-transform .4s;
+    transition: transform .4s;
 }
 
 .sidenav-active nav, .sidenav-active .buttonicon{
-      -webkit-transform: translateX(225px);
-      -ms-transform: translateX(225px);
-      transform: translateX(225px);
+      -webkit-transform: translateX(250px);
+      -ms-transform: translateX(250px);
+      transform: translateX(250px);
     }
-
-

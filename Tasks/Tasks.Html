@@ -1,80 +1,76 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="Tasks.css">
-    <title>Tasks</title>
-    <link rel="stylesheet" href="Tasks.css">
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+    <title>Kanbaaan!</title>
+    <link rel="stylesheet" href="jquery-3.3.1.min.js" type="text/css">
+    <link rel="stylesheet" href="Tasks.css" type="text/css">
 </head>
 
 <body>
-    <header>
-        <h1>Gruppe 26 :)</h1>
+    <div id="startup-dialog" title="Welcome to Kanban!">
+        <!--START OF STARTUP DIALOG-->
+        <h2 class="welcome-message">Welcome to this new and better Kanban board</h2>
+        <h3 class="welcome-message">Please enter your project name below:</h3>
+        <input id="input-project-name" type="text" placeholder="Project name..">
+        <input id="add-project-button" type="button" value="add project">
+        <p id="project-name-errormessage"></p>
+    </div>
+    <header id="header-container">
+        <h1 id="project-name">Project Name</h3>
 
     </header>
 
-    <div class="kanban-container">
-        <ul class="kanban-list">
-            <li class="kanban-column kanban-column-onhold">
-                <span class="kanban-column-header header-onhold">
-            <h2>To Do</h2>
-          </span>
-                <div class="kanban-options"></div>
-                <ul class="drag-inner-list">
-                    <li class="drag-item" draggable="true">
+
+    <main id="main-page-container">
+        <!-- START OF MAIN PAGE-->
+
+        <div id="backlog-container" class="task-container connectedSortable">
+            <!-- START OF BACKLOG CONTAINER-->
+            <h3 class="container-names">To-do</h3>
+            <input id="open-task-modal-button" type="button" value="+">
+            <ul id="backlog-list" class="connectedSortable"></ul>
+            <div id="task-modal" title="">
+                <h3 id="hearder-newCard"> Enter the fields below to create a new task</h3>
+                <input id="input-task-name" class="task-fields" type="text" placeholder="Task name">
+                <textarea id="input-task-desc" class="task-fields" rows="2" cols="25" placeholder="Task description"></textarea>
+                <input id="input-task-point" class="task-fields" type="email" placeholder="Email or username">
+                <input id="task-modal-button" type="button" value="add task">
+                <p id="task-errormessage"></p>
+                <input id="open-task-modal-button" type="button" value="+">
+            </div>
 
 
-                    </li>
-                    <li class="drag-item" draggable="true">
+
+        </div>
 
 
-                    </li>
-                    <li class="drag-item" draggable="true">
+
+        <div id="doing-container" class="task-container">
+            <!-- START OF DOING CONTAINER-->
+            <h3 class="container-names">Doing</h3>
+            <ul id="doing-list" class="connectedSortable"></ul>
+        </div>
+
+        <div id="done-container" class="task-container">
+            <!-- START OF DONE CONTAINER-->
+            <h3 class="container-names">Done</h3>
+            <ul id="done-list" class="connectedSortable"></ul>
+        </div>
 
 
-                    </li>
-
-            </li>
-            ¨¨
-
-            </ul>
-            </li>
-
-            <li class="kanban-column kanban-column-doing" id="draggable">
-                <span class="kanban-column-header header-doing">
-           
-                    <h2>Doing</h2>
-          </span>
-                <div class="kanban-options"></div>
-
-                <ul class="drag-inner-list">
 
 
-                </ul>
-            </li>
-            <li class="kanban-column kanban-column-approved" id="dropable">
-                <span class="kanban-column-header header-approved">
-           
-                    <h2>Done</h2>
-          </span>
-                <div class="kanban-options"></div>
-
-                <ul class="drag-inner-list">
+    </main>
+    <!-- END OF MAIN PAGE -->
 
 
-                </ul>
-            </li>
-
-        </ul>
-    </div>
-
-
-    <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js"></script>
-    <script src="Tasks.js"></script>
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="/resources/demos/style.css">
 </body>
+<script src="jquery-3.3.1.min.js"></script>
+<script src="jquery-ui.min.js"></script>
+<script src="Tasks.js"></script>
 
 </html>

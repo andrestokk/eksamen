@@ -104,4 +104,10 @@ ul {
     font-size: 110%;
 }
 
+.nav .close{
+    position: absolute;
+    top:0;
+    right: 25px;
+}
+
 

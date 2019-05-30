@@ -1,6 +1,6 @@
-import {Task} from './Models/task.js';
+import {Task} from './Models/task.js'
 
-let testTask = new Task();
+let testTask = new Task()
 
-testTask.name = 'Testnavn';
-testTask.printName();
+testTask.name = 'Testnavn'
+testTask.printName()

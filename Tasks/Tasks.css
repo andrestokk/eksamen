@@ -92,8 +92,8 @@ ul {
     
 .nav a{
     display: block;
-    padding: 25px 10px;
-    text-align: center;
+    padding: 20px 30px;
+    font-size: 18px;
     text-decoration: none;
 }
 
@@ -123,4 +123,8 @@ ul {
     transition: 0.8s;
     overflow: hidden;
     width: 100%;
+}
+
+.links{
+    color: red;
 }

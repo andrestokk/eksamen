@@ -54,7 +54,7 @@ $(document).ready(function() {
             $("#project-name-errormessage").html("Please enter a project name *")
         } else {
             $("#project-name").html($("#input-project-name").val())
-            $("#startup-dialog").dialog("block")
+            $("#startup-dialog").dialog("close")
         }
     })
 

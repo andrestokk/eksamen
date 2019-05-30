@@ -42,7 +42,7 @@ header {
 }
 
 .kanban-container {
-    margin: 20px auto;
+    margin: 10px auto;
     max-width: 1000px;
 }
 
@@ -83,6 +83,10 @@ ul {
     background: rgb(125, 230, 6);
 }
 
+.header-doing {
+    background: rgb(6, 77, 230);
+}
+
 .drag-inner-list {
     min-height: 50px;
 }
@@ -103,14 +107,4 @@ ul {
 .drop-zone-active {
     border-color: grey;
     box-shadow: 0 0 10px grey
-}
-
-.drag {
-    position: absolute;
-    left: 11px;
-    height: 100px;
-    width: 295px;
-    background-color: rgb(173, 173, 173);
-    font-size: 25px;
-    font-family: 'Verdana';
 }

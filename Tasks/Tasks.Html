@@ -23,15 +23,15 @@
                 <div class="kanban-options"></div>
                 <ul class="drag-inner-list">
                     <li class="drag-item" draggable="true">
-                        <input type="text " id="Text-Box" class="drag" value="">
+
 
                     </li>
                     <li class="drag-item" draggable="true">
-                        <input type="text " id="Text-Box" class="drag" value="">
+
 
                     </li>
                     <li class="drag-item" draggable="true">
-                        <input type="text " id="Text-Box" class="drag" value="">
+
 
                     </li>
 
@@ -41,8 +41,8 @@
             </ul>
             </li>
 
-            <li class="kanban-column kanban-column-approved">
-                <span class="kanban-column-header header-approved">
+            <li class="kanban-column kanban-column-doing" id="draggable">
+                <span class="kanban-column-header header-doing">
            
                     <h2>Doing</h2>
           </span>
@@ -53,7 +53,7 @@
 
                 </ul>
             </li>
-            <li class="kanban-column kanban-column-approved">
+            <li class="kanban-column kanban-column-approved" id="dropable">
                 <span class="kanban-column-header header-approved">
            
                     <h2>Done</h2>
@@ -72,7 +72,9 @@
 
     <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js"></script>
-    <script src="Eksamen.js"></script>
+    <script src="Tasks.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
 </body>
 
 </html>

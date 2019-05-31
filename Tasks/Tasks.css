@@ -17,6 +17,7 @@ body {
 
 .task-container {
     min-height: 100px;
+    border-style: solid;
 }
 
 #project-name-errormessage {

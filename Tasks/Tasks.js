@@ -91,6 +91,7 @@ $(document).ready(function() {
         })
     });
 
+
     //Makes the specified id's droppable, and removes class and adds class on dragged.
     $(function() {
             $("#to-do-list, #doing-list, #backlog-list").droppable({
@@ -132,6 +133,8 @@ $(document).ready(function() {
         <li class="task-cards">
         <article>
         <p class="delete-task-button">x</p>
+        <p class="edit-button">edit</p>
+
             <h3 class="task-text">Taskname: ${taskText}</h3>
             <p class="task-point">User: ${taskPoint}</p>
             <p class="read-more">Details</p>
@@ -252,7 +255,8 @@ $(function() {
         "display": "block",
         "-webkit-box-shadow": "32px 31px 45px -8px rgba(51,77,110,1)",
         "-moz-box-shadow": "32px 31px 45px -8px rgba(51,77,110,1)",
-        "box-shadow": "32px 31px 45px -8px rgba(51,77,110,1)"
+        "box-shadow": "32px 31px 45px -8px rgba(51,77,110,1)",
+
 
 
 

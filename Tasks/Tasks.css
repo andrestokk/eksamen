@@ -51,13 +51,17 @@ ul {
     text-align: left;
 }
 
-.delete-task-button {
+.-button {
     float: right;
     font-size: 20px;
     margin: 0px 15px 0px 0px;
 }
 
 .delete-task-button:hover {
+    cursor: pointer;
+}
+
+.edit-button:hover {
     cursor: pointer;
 }
 
@@ -77,29 +81,29 @@ ul {
     border-radius: 2px;
 }
 
-.buttonicon{
+.buttonicon {
     position: absolute;
-    top:0;
+    top: 0;
     padding: 15px;
 }
 
-.buttonicon:hover{
+.buttonicon:hover {
     cursor: pointer;
 }
 
-.buttonicon div{
-    background-color:#334D6E;
+.buttonicon div {
+    background-color: #334D6E;
     border-radius: 5px;
     height: 6px;
     width: 30px;
     margin: 3px 0;
 }
 
-nav{
-    background-color:#C2CFE0;
+nav {
+    background-color: #C2CFE0;
     display: inline-block;
     position: absolute;
-    top:0;
+    top: 0;
     height: 100%;
     width: 250px;
     left: -250px;
@@ -108,18 +112,18 @@ nav{
     box-shadow: 1px 10px 30px rgb(123, 149, 153);
 }
 
-nav .logo img{
-border-radius: 50%;
-box-sizing: border-box;
+nav .logo img {
+    border-radius: 50%;
+    box-sizing: border-box;
 }
 
-nav .logo{
+nav .logo {
     margin: 10px 0;
     text-align: center;
     height: 200px;
 }
 
-nav a{
+nav a {
     display: block;
     font-size: 20px;
     text-decoration: none;
@@ -127,17 +131,19 @@ nav a{
     padding: 10px 30px;
 }
 
-nav a:hover{
+nav a:hover {
     color: rgb(17, 104, 131);
 }
 
-nav, .buttonicon{
+nav,
+.buttonicon {
     -webkit-transition: -webkit-transform .4s;
     transition: transform .4s;
 }
 
-.sidenav-active nav, .sidenav-active .buttonicon{
-      -webkit-transform: translateX(250px);
-      -ms-transform: translateX(250px);
-      transform: translateX(250px);
-    }
+.sidenav-active nav,
+.sidenav-active .buttonicon {
+    -webkit-transform: translateX(250px);
+    -ms-transform: translateX(250px);
+    transform: translateX(250px);
+}

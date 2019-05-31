@@ -37,7 +37,7 @@ $(document).ready(function() {
     $(function() {
         $("#main-page-container").css({
             "display": "grid",
-            "grid-template-columns": "repeat(12, 3fr)",
+            "grid-template-columns": "repeat(6, 3fr)",
 
         })
     });
@@ -136,6 +136,7 @@ $(document).ready(function() {
             <p class="task-point">User: ${taskPoint}</p>
             <p class="read-more">Details</p>
             <p class="task-desc">Description: ${taskDesc}</p>
+            
         </article>
     </li>`)
     }
@@ -145,18 +146,8 @@ $(document).ready(function() {
 $(function() {
     $(".task-container").css({
         "min-height": "800px",
-        "grid-column": "4/ span 2/",
+        "grid-column": "auto/ span 2",
         "margin": "0 5px 0 5px",
-        "gridColumnStart": "4"
-
-
-
-
-
-
-
-
-
 
     })
 })
@@ -199,6 +190,8 @@ function cardStyle() {
         "box-shadow": "32px 31px 45px -8px rgba(51,77,110,1)",
         "border": "none",
         "borderRadius": "25px"
+
+
 
     })
 };

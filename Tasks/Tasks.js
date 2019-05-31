@@ -37,7 +37,8 @@ $(document).ready(function() {
     $(function() {
         $("#main-page-container").css({
             "display": "grid",
-            "grid-template-columns": "repeat(6, 1fr)"
+            "grid-template-columns": "repeat(12, 3fr)",
+
         })
     });
     // Defines that the div's with a specific id is made sortable and connects sortable on all fields. 
@@ -144,8 +145,11 @@ $(document).ready(function() {
 $(function() {
     $(".task-container").css({
         "min-height": "800px",
-        "grid-column": "auto/ span 2",
+        "grid-column": "4/ span 2/",
         "margin": "0 5px 0 5px",
+        "gridColumnStart": "4"
+
+
 
 
 
@@ -265,6 +269,5 @@ $(function() {
 })
 
 function toggleSidebar() {
-      document.body.classList.toggle('sidenav-active');
-    }
-    
+    document.body.classList.toggle('sidenav-active');
+}

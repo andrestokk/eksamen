@@ -153,6 +153,7 @@ $(document).ready(function() {
     $(function(){
         let tasks = taskService.getTasksByStatus('todo')
         for(let task of tasks){
+            // Fake input of form, since createCard() uses form data and not parameters
             $("#input-task-name").val(task.name);
             $("#input-task-desc").val(task.description);
             $("#input-task-point").val(task.members[0].name);

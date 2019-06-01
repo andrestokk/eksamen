@@ -7,4 +7,8 @@ export class TaskService {
 
     addTask = (task) => this.tasks.push(task)
     count = () => this.tasks.length
+
+    getTasksByStatus = function(status){
+        
+    }
 }

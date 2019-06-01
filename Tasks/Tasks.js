@@ -1,3 +1,6 @@
+import {Task} from '../Scripts/Models/task.js'
+import {TaskService} from '../Scripts/Services/task_service.js'
+
 /* Opening start up dialog when site is opened */
 $(document).ready(function() {
     $(function() {
@@ -143,7 +146,21 @@ $(document).ready(function() {
         </article>
     </li>`)
     }
+
+    $(function(){
+    
+        let task = new Task('Oppgave 1', 'Dette er første oppgave', null)
+
+        $("#input-task-name").val(task.name);
+        $("#input-task-desc").val(task.description);
+        $("#input-task-point").val('n/a');
+    
+        createCard();
+    });
+    
+    
 });
+
 
 /* Styling elemnts with Jquery */
 $(function() {

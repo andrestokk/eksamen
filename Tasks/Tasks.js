@@ -2,6 +2,10 @@ import {TaskService} from '../Scripts/Services/task_service.js'
 
 /* Opening start up dialog when site is opened */
 $(document).ready(function() {
+
+    // "Document" scope TaskService
+    let taskService = new TaskService()
+
     $(function() {
         $("#startup-dialog").dialog({
             modal: true,
@@ -147,7 +151,6 @@ $(document).ready(function() {
     }
 
     $(function(){
-        let taskService = new TaskService()
         let tasks = taskService.getTasksByStatus('todo')
         for(let task of tasks){
             $("#input-task-name").val(task.name);

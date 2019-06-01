@@ -37,7 +37,8 @@ $(document).ready(function() {
     $(function() {
         $("#main-page-container").css({
             "display": "grid",
-            "grid-template-columns": "repeat(6, 1fr)"
+            "grid-template-columns": "repeat(6, 3fr)",
+
         })
     });
     // Defines that the div's with a specific id is made sortable and connects sortable on all fields. 
@@ -90,6 +91,7 @@ $(document).ready(function() {
         })
     });
 
+
     //Makes the specified id's droppable, and removes class and adds class on dragged.
     $(function() {
             $("#to-do-list, #doing-list, #backlog-list").droppable({
@@ -131,10 +133,13 @@ $(document).ready(function() {
         <li class="task-cards">
         <article>
         <p class="delete-task-button">x</p>
+        <p class="edit-button">edit</p>
+
             <h3 class="task-text">Taskname: ${taskText}</h3>
             <p class="task-point">User: ${taskPoint}</p>
             <p class="read-more">Details</p>
             <p class="task-desc">Description: ${taskDesc}</p>
+            
         </article>
     </li>`)
     }
@@ -146,13 +151,6 @@ $(function() {
         "min-height": "800px",
         "grid-column": "auto/ span 2",
         "margin": "0 5px 0 5px",
-
-
-
-
-
-
-
 
     })
 })
@@ -195,6 +193,8 @@ function cardStyle() {
         "box-shadow": "32px 31px 45px -8px rgba(51,77,110,1)",
         "border": "none",
         "borderRadius": "25px"
+
+
 
     })
 };
@@ -255,7 +255,8 @@ $(function() {
         "display": "block",
         "-webkit-box-shadow": "32px 31px 45px -8px rgba(51,77,110,1)",
         "-moz-box-shadow": "32px 31px 45px -8px rgba(51,77,110,1)",
-        "box-shadow": "32px 31px 45px -8px rgba(51,77,110,1)"
+        "box-shadow": "32px 31px 45px -8px rgba(51,77,110,1)",
+
 
 
 
@@ -263,3 +264,7 @@ $(function() {
 
     })
 })
+
+function toggleSidebar() {
+    document.body.classList.toggle('sidenav-active');
+}

@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="jquery-3.3.1.min.js" type="text/css">
     <link rel="stylesheet" href="Tasks.css" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 </head>
 
 <body>
@@ -25,23 +26,45 @@
 
     <div>
         <header id="header-container">
-            <h1 id="project-name" contenteditable="true"> yo</h1>
+            <h1 id="project-name"> Prosjekt navn</h1>
 
         </header>
     </div>
 
+    <!-- START SIDE MENUBAR -->
+    <div class="buttonicon" id="buttonicon" onclick="toggleSidebar();">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <nav>
+        <div class="logo"><img src="http://lorempixel.com/128/128/animals/"></div>
+        <div class="categories">
+            <a href="#">Kanban desk</a>
+            <a href="#">Tasks</a>
+            <a href="#">Email</a>
+            <a href="#">Contacts</a>
+            <a href="#">Members</a>
+            <a href="#">Add members</a>
+            <div id="addmembers">add members</div>
+        </div>
+    </nav>
+
+    <!-- END SIDE MENUBAR -->
     <main id="main-page-container">
         <!-- START OF MAIN PAGE-->
 
         <div id="backlog-container" class="task-container connectedSortable">
-            <!-- START OF BACKLOG CONTAINER-->
+            <!-- START OF Doing CONTAINER-->
             <h3 class="container-names">To-do</h3>
             <input id="open-task-modal-button" type="button" value="➕">
             <ul id="backlog-list" class="connectedSortable"></ul>
             <div id="task-modal" title="">
+
                 <h3 id="hearder-newCard"> Enter the fields below to create a new task</h3>
                 <input id="input-task-name" class="task-fields" type="text" placeholder="Task name">
-                <textarea id="input-task-desc" class="task-fields" rows="2" cols="25" placeholder="Task description"></textarea>
+                <textarea id="input-task-desc" class="task-fields" rows="1" cols="25s" placeholder="Task description"></textarea>
                 <input id="input-task-point" class="task-fields" type="email" placeholder="Email or username">
                 <input id="task-modal-button" type="button" value="add task">
                 <p id="task-errormessage"></p>
@@ -68,9 +91,7 @@
 
 
 
-
-    </main>
-    <!-- END OF MAIN PAGE -->
+        <!-- END OF MAIN PAGE -->
 
 
 </body>

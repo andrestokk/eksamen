@@ -1,5 +1,6 @@
 import {Task} from './Models/task.js'
-import { TaskService } from './Services/task_service.js';
+import {TaskService} from './Services/task_service.js'
+import {MemberService} from './Services/member_service.js'
 
 let task1 = new Task('Clean bathroom', 'Clean the bathroom with soap')
 
@@ -12,4 +13,7 @@ taskService.addTask(task2)
 console.log(taskService.count())
 console.log(task1.name)
 
+let memberService = new MemberService()
+let member = memberService.getByUsername('jumam')
 
+console.log(member.name)

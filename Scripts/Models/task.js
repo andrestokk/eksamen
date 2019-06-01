@@ -6,10 +6,13 @@ export class Task {
     deadline
     members
 
-    constructor(name, description){
+    constructor(name, description, member){
         this.name = name
         this.description = description
+        this.members = new Array(member)
     }
+
+
 
     printName = function() {
          console.log(this.name)

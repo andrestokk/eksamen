@@ -5,8 +5,15 @@ import { Member } from './Models/member.js';
 
 
 
-testSetTaskStatus()
+testLocalStorage()
+//testSetTaskStatus()
 //testMembersAndTasks()
+
+function testLocalStorage(){
+    var taskService = new TaskService()
+    localStorage.setItem('tasks', JSON.stringify(taskService.tasks))
+    //console.log(JSON.stringify(taskService.tasks))
+}
 
 
 function testSetTaskStatus(){

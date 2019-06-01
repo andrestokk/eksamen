@@ -15,8 +15,7 @@ export class MemberService {
 
     }
 
-    getByUsername = function(username){
-        return this.members.find(m => m.username == username)
-    }
+    addMember = (member) => this.members.push(member)
+    getByUsername = (username) => this.members.find(m => m.username == username)
 
 }

@@ -16,6 +16,21 @@ export class MemberService {
     }
 
     addMember = (member) => this.members.push(member)
+    
+    deleteMember = function(member) {
+        let index = this.members.find(m => m.id === member.id).index
+        if(index != undefined){
+            this.members.splice(index, 1)
+        }
+    }
+    
     getByUsername = (username) => this.members.find(m => m.username == username)
 
+    loadMembers = function() {
+        throw 'Not yet implemented'
+    }
+    
+    saveMembers = function() {
+        throw 'Not yet implemented'
+    }
 }

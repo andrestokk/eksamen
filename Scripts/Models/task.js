@@ -6,7 +6,8 @@ export class Task {
     deadline
     members
 
-    constructor(name, description, member){
+    constructor(id, name, description, member){
+        this.id = id
         this.name = name
         this.description = description
         this.members = new Array(member)
@@ -25,6 +26,14 @@ export class Task {
                 throw 'Use todo, ongoing or done for Task status'
         }
         this.status = status
+    }
+
+    addMember = (member) => this.members.push(member)
+    removeMember = function(member) {
+        let index = this.members.find(m => m.id === member.id).index
+        if(index != undefined){
+            this.members.splice(index, 1)
+        }
     }
 
     printName = function() {

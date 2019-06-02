@@ -1,10 +1,11 @@
-import {TaskService} from '../Scripts/Services/task_service.js'
+import {AppManager} from '../Scripts/Services/app_manager.js'
 
 /* Opening start up dialog when site is opened */
 $(document).ready(function() {
 
     // "Document" scope TaskService
-    let taskService = new TaskService()
+    let app = new AppManager()
+    app.loadData()
 
     $(function() {
         $("#startup-dialog").dialog({
@@ -151,7 +152,7 @@ $(document).ready(function() {
     }
 
     $(function(){
-        let tasks = taskService.getTasksByStatus('todo')
+        let tasks = app.taskService.getTasksByStatus('todo')
         for(let task of tasks){
             // Fake input of form, since createCard() uses form data and not parameters
             $("#input-task-name").val(task.name);

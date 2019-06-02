@@ -69,6 +69,7 @@ $(document).ready(function() {
             createCard();
             cleanInput();
             cardStyle();
+
         }
 
     });
@@ -145,6 +146,11 @@ $(document).ready(function() {
     }
 });
 
+function editCard() {
+    $
+}
+
+
 /* Styling elemnts with Jquery */
 $(function() {
     $(".task-container").css({
@@ -171,8 +177,6 @@ $(function() {
         "font-size": "35px",
         "margin": "0",
         "padding": "0",
-
-
         "border": "0",
 
 

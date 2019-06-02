@@ -75,7 +75,6 @@ $(document).ready(function() {
         } else {
             createCard();
             cleanInput();
-            cardStyle();
         }
 
     });
@@ -165,126 +164,6 @@ $(document).ready(function() {
     
 });
 
-
-/* Styling elemnts with Jquery */
-$(function() {
-    $(".task-container").css({
-        "min-height": "800px",
-        "grid-column": "auto/ span 2",
-        "margin": "0 5px 0 5px",
-
-    })
-})
-$(function() {
-    $(".container-names").css({
-        "text-align": "center",
-        "color": "#334D6E"
-
-    })
-});
-$(function() {
-    $("#open-task-modal-button").css({
-        "border-radius": "100%",
-        "position": "relative",
-        "top": "50px",
-        "height": "40px",
-        "width": "40px",
-        "font-size": "35px",
-        "margin": "0",
-        "padding": "0",
-
-
-        "border": "0",
-
-
-
-    })
-});
-
-
-
-function cardStyle() {
-    $(".task-cards").css({
-        "height": "auto",
-        "min-height": "10px",
-        "margin": "20px 0px 20px 0px",
-        "text-align": "center",
-        "-webkit-box-shadow": "32px 31px 45px -8px rgba(51,77,110,1)",
-        "-moz-box-shadow": "32px 31px 45px -8px rgba(51,77,110,1)",
-        "box-shadow": "32px 31px 45px -8px rgba(51,77,110,1)",
-        "border": "none",
-        "borderRadius": "25px"
-
-
-
-    })
-};
-$(function() {
-    $("#hearder-newCard").css({
-        "fontFamily": "verdana",
-        "fontSize": "17px",
-
-
-
-
-
-    })
-})
-$(function() {
-    $("#input-task-name").css({
-        "fontFamily": "verdana",
-        "fontSize": "17px",
-        "border-borderRadius": "25"
-
-
-
-
-
-    })
-})
-$(function() {
-    $("#input-task-desc").css({
-        "fontFamily": "verdana",
-        "fontSize": "17px",
-        "borderRadius": "25",
-        "display": "block"
-
-
-
-
-
-    })
-})
-$(function() {
-    $("#delete-task-button").css({
-        "fontFamily": "verdana",
-        "fontSize": "17px",
-        "borderRadius": "25",
-        "display": "block"
-
-
-
-
-
-    })
-})
-$(function() {
-    $("#task-modal").css({
-        "fontFamily": "verdana",
-        "fontSize": "17px",
-        "borderRadius": "25",
-        "display": "block",
-        "-webkit-box-shadow": "32px 31px 45px -8px rgba(51,77,110,1)",
-        "-moz-box-shadow": "32px 31px 45px -8px rgba(51,77,110,1)",
-        "box-shadow": "32px 31px 45px -8px rgba(51,77,110,1)",
-
-
-
-
-
-
-    })
-})
 
 function toggleSidebar() {
     document.body.classList.toggle('sidenav-active');

@@ -84,6 +84,10 @@ function toggleSidebar() {
 
 function wireUpEvents(){
 
+    $('#sideBarButton').on('click', function(){
+        toggleSidebar()
+    })
+
     //a function to make a dialog appear on button click
     $("#open-task-modal-button").on("click", function() {
         $("#task-modal").dialog("open")

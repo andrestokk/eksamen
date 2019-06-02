@@ -15,9 +15,21 @@ body {
     color: rgb(255, 255, 255);
 }
 
+#main-page-container {
+    display: grid;
+    grid-template-columns: repeat(6, 3fr);
+}
+
 .task-container {
-    min-height: 100px;
+    min-height: 800px;
     border-style: solid;
+    grid-column: auto / span 2;
+    margin: 0 5px 0 5px;
+}
+
+.container-names{
+    text-align: center;
+    color: #334D6E;
 }
 
 #project-name-errormessage {
@@ -47,15 +59,32 @@ ul {
     margin: 0;
 }
 
+#input-task-name {
+    font-family: verdana;
+    font-size: 17px;
+    border-radius: 25px;
+}
+
 #input-task-desc {
     height: 100px;
     text-align: left;
+    font-family: verdana;
+    font-size: 17px;
+    border-radius: 25;
+    display: block;
 }
 
 .-button {
     float: right;
     font-size: 20px;
     margin: 0px 15px 0px 0px;
+}
+
+#delete-task-button {
+    font-family: verdana;
+    font-size: 17px;
+    border-radius: 25px;
+    display: block;
 }
 
 .delete-task-button:hover {
@@ -73,6 +102,15 @@ ul {
 .task-cards {
     background-color: rgb(255, 255, 255);
     border-style: solid;
+    height: auto;
+    min-height: 10px;
+    margin: 20px 0px 20px 0px;
+    text-align: center;
+    -webkit-box-shadow: 32px 31px 45px -8px rgba(51, 77, 110, 1);
+    -moz-box-shadow: 32px 31px 45px -8px rgba(51, 77, 110, 1);
+    box-shadow: 32px 31px 45px -8px rgba(51, 77, 110, 1);
+    border: none;
+    border-radius: 25px;
 }
 
 #task-modal {
@@ -80,6 +118,14 @@ ul {
     height: 20%;
     width: 50px;
     border-radius: 2px;
+
+    font-family: verdana;
+    font-size: 17px;
+    border-radius: 25px;
+    display: block;
+    -webkit-box-shadow: 32px 31px 45px -8px rgba(51,77,110,1);
+    -moz-box-shadow: 32px 31px 45px -8px rgba(51,77,110,1);
+    box-shadow: 32px 31px 45px -8px rgba(51,77,110,1);
 }
 
 .buttonicon {
@@ -98,6 +144,18 @@ ul {
     height: 6px;
     width: 30px;
     margin: 3px 0;
+}
+
+#open-task-modal-button {
+    border-radius: 100%;
+    position: relative;
+    top: 50px;
+    height: 40px;
+    width: 40px;
+    font-size: 35px;
+    margin: 0;
+    padding: 0;
+    border: 0;
 }
 
 nav {
@@ -147,4 +205,10 @@ nav,
     -webkit-transform: translateX(250px);
     -ms-transform: translateX(250px);
     transform: translateX(250px);
+}
+
+/* TODO: check "hearder" */
+#hearder-newCard {
+    font-family: verdana;
+    font-size: 17px;
 }

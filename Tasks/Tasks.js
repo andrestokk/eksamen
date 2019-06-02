@@ -6,39 +6,7 @@ $(document).ready(function() {
     let app = new AppManager()
     app.loadData()
     wireUpEvents()
-
-    $(function() {
-        $("#startup-dialog").dialog({
-            modal: true,
-            height: 350,
-            width: 400,
-            resizable: false,
-            autoOpen: false,
-            show: {
-                effect: "scale"
-            },
-            hide: {
-                effect: "fade" //BOOOM BOOM BOOOM
-            }
-        })
-    });
-
-    /* The task modal that opens when activated */
-    $(function() {
-        $("#task-modal").dialog({
-            modal: true,
-            height: 300,
-            width: 300,
-            autoOpen: false,
-            resizable: false,
-            show: {
-                effect: "fade"
-            },
-            hide: {
-                effect: "fade"
-            }
-        })
-    })
+    createDialogs()
 
     // Defines that the div's with a specific id is made sortable and connects sortable on all fields. 
     $(function() {
@@ -66,11 +34,6 @@ $(document).ready(function() {
         })
     })
 
-    //a function to make a dialog appear on button click
-    $("#open-task-modal-button").on("click", function() {
-        $("#task-modal").dialog("open")
-        $("#task-errormessage").hide()
-    });
     //function for cleaning inputfields. Just sets all the values in a modal to empty.
     function cleanInput() {
         $("#input-task-name").val("")
@@ -120,6 +83,13 @@ function toggleSidebar() {
 }
 
 function wireUpEvents(){
+
+    //a function to make a dialog appear on button click
+    $("#open-task-modal-button").on("click", function() {
+        $("#task-modal").dialog("open")
+        $("#task-errormessage").hide()
+    });
+
     /*Functions to check if fields are filled, if not errormessage will appear.*/
     $("#add-project-button").on("click", function() {
         if ($("#input-project-name").val() === "") {
@@ -142,6 +112,7 @@ function wireUpEvents(){
         }
 
     });
+
     //Function for toggeling on and off description on each card.
     $(document).on("click", ".read-more", function() {
         $(this).parent().find(".task-desc").toggle()
@@ -160,4 +131,37 @@ function wireUpEvents(){
             },
         })
     });
+}
+
+
+function createDialogs(){
+
+    $("#startup-dialog").dialog({
+        modal: true,
+        height: 350,
+        width: 400,
+        resizable: false,
+        autoOpen: false,
+        show: {
+            effect: "scale"
+        },
+        hide: {
+            effect: "fade" //BOOOM BOOM BOOOM
+        }
+    })
+
+    /* The task modal that opens when activated */
+    $("#task-modal").dialog({
+        modal: true,
+        height: 300,
+        width: 300,
+        autoOpen: false,
+        resizable: false,
+        show: {
+            effect: "fade"
+        },
+        hide: {
+            effect: "fade"
+        }
+    })
 }

@@ -7,6 +7,7 @@ let app = new AppManager()
 $(document).ready(function() {
 
     app.loadData()
+    checkData()
     wireUpEvents()
     createDialogs()
     initDragDrop()
@@ -29,6 +30,13 @@ $(document).ready(function() {
  *              ░              ░ ░ ░                ░      ░ ░           ░       ░  
  *                               ░                                                  
  */
+
+function checkData(){
+    if(app.memberService.members.length == 0){
+        app.memberService.seedDebugData()
+        app.saveData()
+    }
+}
 
 function displayData() {
     let tasks = app.taskService.getTasksByStatus('todo')
@@ -117,12 +125,6 @@ function wireUpEvents() {
             $("#task-errormessage").show()
             $("#task-errormessage").html("Please enter the required fields *")
         } else {
-            HEAD
-            createCard();
-            cleanInput();
-            cardStyle();
-
-
             let username = $("#input-task-point").val()
             let member = app.memberService.getByUsername(username)
             if (member == undefined) {
@@ -132,8 +134,7 @@ function wireUpEvents() {
             }
             let name = $("#input-task-name").val()
             let description = $("#input-task-desc").val()
-                //TODO: Remove hard coded magic number (id = "1")
-                //TODO: Remove hard coded magic number (id = "1")
+            //TODO: Remove hard coded magic number (id = "1")
             let task = new Task(1, name, description, member)
             app.taskService.addTask(task)
             app.saveData()

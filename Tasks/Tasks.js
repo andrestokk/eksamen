@@ -3,9 +3,9 @@ import {AppManager} from '../Scripts/Services/app_manager.js'
 /* Opening start up dialog when site is opened */
 $(document).ready(function() {
 
-    // "Document" scope TaskService
     let app = new AppManager()
     app.loadData()
+    wireUpEvents()
 
     $(function() {
         $("#startup-dialog").dialog({
@@ -46,48 +46,6 @@ $(document).ready(function() {
             connectWith: ".connectedSortable"
         }).disableSelection();
     })
-
-
-    /*Functions to check if fields are filled, if not errormessage will appear.*/
-    $("#add-project-button").on("click", function() {
-        if ($("#input-project-name").val() === "") {
-            $("#project-name-errormessage").html("Please enter a project name *")
-        } else {
-            $("#project-name").html($("#input-project-name").val())
-            $("#startup-dialog").dialog("close")
-        }
-    })
-
-    //This function is given to a single button that appears in the "#task-modal", and checks if the value given is okay.
-    //If the value is not empty, it runs three methods defined below.
-    $("#task-modal-button").on("click", function() {
-        if ($("#input-task-name").val() === "" || ($("#input-task-desc")).val() === "" || ($("#input-task-point")).val() === "") {
-            $("#task-errormessage").show()
-            $("#task-errormessage").html("Please enter the required fields *")
-        } else {
-            createCard();
-            cleanInput();
-        }
-
-    });
-    //Function for toggeling on and off description on each card.
-    $(document).on("click", ".read-more", function() {
-        $(this).parent().find(".task-desc").toggle()
-    });
-
-    //An onclick function with self made animation for deleting a specific card
-    $(document).on("click", ".delete-task-button", function() {
-        $(this).closest(".task-cards, .done-task").animate({
-            width: "toggle",
-            height: "toggle"
-        }, {
-            duration: 200,
-            specialEasing: {
-                width: "swing",
-                height: "easeOutBounce"
-            },
-        })
-    });
 
 
     //Makes the specified id's droppable, and removes class and adds class on dragged.
@@ -159,4 +117,47 @@ $(document).ready(function() {
 
 function toggleSidebar() {
     document.body.classList.toggle('sidenav-active');
+}
+
+function wireUpEvents(){
+    /*Functions to check if fields are filled, if not errormessage will appear.*/
+    $("#add-project-button").on("click", function() {
+        if ($("#input-project-name").val() === "") {
+            $("#project-name-errormessage").html("Please enter a project name *")
+        } else {
+            $("#project-name").html($("#input-project-name").val())
+            $("#startup-dialog").dialog("close")
+        }
+    })
+
+    //This function is given to a single button that appears in the "#task-modal", and checks if the value given is okay.
+    //If the value is not empty, it runs three methods defined below.
+    $("#task-modal-button").on("click", function() {
+        if ($("#input-task-name").val() === "" || ($("#input-task-desc")).val() === "" || ($("#input-task-point")).val() === "") {
+            $("#task-errormessage").show()
+            $("#task-errormessage").html("Please enter the required fields *")
+        } else {
+            createCard();
+            cleanInput();
+        }
+
+    });
+    //Function for toggeling on and off description on each card.
+    $(document).on("click", ".read-more", function() {
+        $(this).parent().find(".task-desc").toggle()
+    });
+
+    //An onclick function with self made animation for deleting a specific card
+    $(document).on("click", ".delete-task-button", function() {
+        $(this).closest(".task-cards, .done-task").animate({
+            width: "toggle",
+            height: "toggle"
+        }, {
+            duration: 200,
+            specialEasing: {
+                width: "swing",
+                height: "easeOutBounce"
+            },
+        })
+    });
 }

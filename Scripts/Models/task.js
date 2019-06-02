@@ -1,3 +1,5 @@
+import { AppManager } from '../Services/app_manager.js'
+
 export class Task {
     id
     name
@@ -6,8 +8,10 @@ export class Task {
     deadline
     members
 
-    constructor(id, name, description, member){
-        this.id = id
+    constructor(name, description, member){
+        let appManager = new AppManager()
+        appManager.loadData()
+        this.id = appManager.taskService.getNextTaskId()
         this.name = name
         this.description = description
         this.members = new Array(member)

@@ -19,6 +19,16 @@ export class TaskService {
     
     count = () => this.tasks.length
 
+    getNextTaskId = function() {
+        let highestId = 0
+        for(let task of this.tasks){
+            if(task.id > highestId){
+                highestId = task.id
+            }
+        }
+        return highestId + 1
+    }
+
     getTasksByStatus = function(status){
         return this.tasks.filter(t => t.status === status)
     }

@@ -16,6 +16,8 @@ function testAppManager() {
     let appManager = new AppManager()
 
     //appManager.saveData()
+    // appManager.memberService.seedDebugData()
+    // appManager.saveData()
     appManager.loadData()
     console.log(appManager.memberService.members)
     console.log(appManager.taskService.tasks)

@@ -1,16 +1,17 @@
 import {AppManager} from '../Scripts/Services/app_manager.js'
+import {Task} from '../Scripts/Models/task.js'
+
+let app = new AppManager()
 
 /* Opening start up dialog when site is opened */
 $(document).ready(function() {
 
-    let app = new AppManager()
     app.loadData()
-
     wireUpEvents()
     createDialogs()
     initDragDrop()
     initSortable()
-    displayData(app)
+    displayData()
 
 });
 
@@ -29,14 +30,10 @@ $(document).ready(function() {
  *                               ░                                                  
  */
 
-function displayData(app){
+function displayData(){
     let tasks = app.taskService.getTasksByStatus('todo')
     for(let task of tasks){
-        // Fake input of form, since createCard() uses form data and not parameters
-        $("#input-task-name").val(task.name);
-        $("#input-task-desc").val(task.description);
-        $("#input-task-point").val(task.members[0].name);
-        createCard();
+        createCard(task);
     }
 }
 
@@ -53,10 +50,13 @@ function cleanInput() {
 }
 
 //function for creating cards, with value and it creates a HTML template that is appended by a list.
-function createCard() {
-    let taskText = $("#input-task-name").val()
-    let taskDesc = $("#input-task-desc").val()
-    let taskPoint = $("#input-task-point").val()
+function createCard(task) {
+    // let taskText = $("#input-task-name").val()
+    // let taskDesc = $("#input-task-desc").val()
+    // let taskPoint = $("#input-task-point").val()
+    let taskText = task.name
+    let taskDesc = task.description
+    let taskPoint = task.members[0].name
 
     $("#backlog-list").append(`
     <li class="task-cards">
@@ -64,10 +64,10 @@ function createCard() {
     <p class="delete-task-button">x</p>
     <p class="edit-button">edit</p>
 
-        <h3 class="task-text">Taskname: ${taskText}</h3>
+        <h3 class="task-text">${taskText}</h3>
         <p class="task-point">User: ${taskPoint}</p>
-        <p class="read-more">Details</p>
-        <p class="task-desc">Description: ${taskDesc}</p>
+        <p class="read-more">Click for description</p>
+        <p class="task-desc">${taskDesc}</p>
         
     </article>
 </li>`)
@@ -117,8 +117,20 @@ function wireUpEvents(){
             $("#task-errormessage").show()
             $("#task-errormessage").html("Please enter the required fields *")
         } else {
-            createCard();
-            cleanInput();
+            let username = $("#input-task-point").val()
+            let member = app.memberService.getByUsername(username)
+            if(member == undefined){
+                $("#task-errormessage").show()
+                $("#task-errormessage").html("Could not find member with that username")
+                return
+            }
+            let name = $("#input-task-name").val()
+            let description = $("#input-task-desc").val()
+            let task = new Task(1, name, description, member)
+            app.taskService.addTask(task)
+            app.saveData()
+            createCard(task)
+            cleanInput()
         }
 
     });

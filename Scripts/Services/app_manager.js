@@ -15,6 +15,10 @@ export class AppManager {
         // Load and parse app data
         let data = JSON.parse(localStorage.getItem('VaneData'))
         
+        if(data == null){
+            return
+        }
+
         // Check data version. (For now, just check equality. Could apply any conversions here).
         if(data.version != this.version){
             throw "Version of data does not match app version"

@@ -5,14 +5,6 @@ export class MemberService {
 
     constructor(){
         this.members = new Array()
-
-        //DEBUG Seed
-        this.members.push(new Member(1, 'jumam', 'Julie Mamelund'))
-        this.members.push(new Member(2, 'thore', 'Thomas Øren'))
-        this.members.push(new Member(3, 'ansto', 'André Stokkeland'))
-        this.members.push(new Member(4, 'maeli', 'Mathias Myhre Eli'))
-        this.members.push(new Member(5, 'elklu', 'Elise Klungtveit'))
-
     }
 
     addMember = (member) => this.members.push(member)
@@ -26,11 +18,13 @@ export class MemberService {
     
     getByUsername = (username) => this.members.find(m => m.username == username)
 
-    loadMembers = function() {
-        throw 'Not yet implemented'
+    seedDebugData = function(){
+        //DEBUG Seed
+        this.members.push(new Member(1, 'jumam', 'Julie Mamelund'))
+        this.members.push(new Member(2, 'thore', 'Thomas Øren'))
+        this.members.push(new Member(3, 'ansto', 'André Stokkeland'))
+        this.members.push(new Member(4, 'maeli', 'Mathias Myhre Eli'))
+        this.members.push(new Member(5, 'elklu', 'Elise Klungtveit'))
     }
-    
-    saveMembers = function() {
-        throw 'Not yet implemented'
-    }
+
 }

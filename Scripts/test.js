@@ -2,15 +2,28 @@ import {Task} from './Models/task.js'
 import {TaskService} from './Services/task_service.js'
 import {MemberService} from './Services/member_service.js'
 import { Member } from './Models/member.js';
+import { AppManager } from './Services/app_manager.js';
 
 
 
-testLocalStorage()
+testAppManager()
+//testLocalStorage()
 //testSetTaskStatus()
 //testMembersAndTasks()
 
+
+function testAppManager() {
+    let appManager = new AppManager()
+
+    //appManager.saveData()
+    appManager.loadData()
+    console.log(appManager.memberService.members)
+    console.log(appManager.taskService.tasks)
+}
+
+
 function testLocalStorage(){
-    var taskService = new TaskService()
+    let taskService = new TaskService()
     localStorage.setItem('tasks', JSON.stringify(taskService.tasks))
     //console.log(JSON.stringify(taskService.tasks))
 }

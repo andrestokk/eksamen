@@ -6,18 +6,6 @@ export class TaskService {
 
     constructor(){
         this.tasks = new Array()
-
-        //DEBUG Seed
-        let member = new Member(1, 'dummy', 'dummy')
-
-        let task = new Task(1, 'Task 0', 'Ongoing task', member)
-        task.setStatus('ongoing')
-        this.tasks.push(task)
-
-        this.tasks.push(new Task(2, 'Task 1', 'The first task', member))
-        this.tasks.push(new Task(3, 'Task 2', 'The second task', member))
-        this.tasks.push(new Task(4, 'Task 3', 'The last task', member))
-
     }
 
     addTask = (task) => this.tasks.push(task)
@@ -35,11 +23,17 @@ export class TaskService {
         return this.tasks.filter(t => t.status === status)
     }
 
-    loadTasks = function() {
-        throw 'Not yet implemented'
+    seedDebugData = function(){
+        //DEBUG Seed
+        let member = new Member(1, 'dummy', 'dummy')
+
+        let task = new Task(1, 'Task 0', 'Ongoing task', member)
+        task.setStatus('ongoing')
+        this.tasks.push(task)
+
+        this.tasks.push(new Task(2, 'Task 1', 'The first task', member))
+        this.tasks.push(new Task(3, 'Task 2', 'The second task', member))
+        this.tasks.push(new Task(4, 'Task 3', 'The last task', member))
     }
-    
-    saveTasks = function() {
-        throw 'Not yet implemented'
-    }
+
 }

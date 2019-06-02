@@ -40,14 +40,6 @@ $(document).ready(function() {
         })
     })
 
-    /*Makes grid system */
-    $(function() {
-        $("#main-page-container").css({
-            "display": "grid",
-            "grid-template-columns": "repeat(6, 3fr)",
-
-        })
-    });
     // Defines that the div's with a specific id is made sortable and connects sortable on all fields. 
     $(function() {
         $("#backlog-list, #to-do-list, #doing-list, #done-list").sortable({

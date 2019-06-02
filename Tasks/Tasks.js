@@ -13,7 +13,7 @@ $(document).ready(function() {
             height: 350,
             width: 400,
             resizable: false,
-            autoOpen: true,
+            autoOpen: false,
             show: {
                 effect: "scale"
             },

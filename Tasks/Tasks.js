@@ -59,23 +59,16 @@ function cleanInput() {
 
 //function for creating cards, with value and it creates a HTML template that is appended by a list.
 function createCard(task) {
-    // let taskText = $("#input-task-name").val()
-    // let taskDesc = $("#input-task-desc").val()
-    // let taskPoint = $("#input-task-point").val()
-    let taskText = task.name
-    let taskDesc = task.description
-    let taskPoint = task.members[0].name
-
     $("#backlog-list").append(`
-    <li class="task-cards">
+    <li class="task-cards" data-id="${task.id}">
     <article>
     <p class="delete-task-button">x</p>
     <p class="edit-button">edit</p>
 
-        <h3 class="task-text">${taskText}</h3>
-        <p class="task-point">User: ${taskPoint}</p>
+        <h3 class="task-text">${task.name}</h3>
+        <p class="task-point">User: ${task.members[0].name}</p>
         <p class="read-more">Click for description</p>
-        <p class="task-desc">${taskDesc}</p>
+        <p class="task-desc">${task.description}</p>
         
     </article>
 </li>`)
@@ -201,6 +194,7 @@ function initDragDrop() {
     //Makes the specified id's droppable, and removes class and adds class on dragged.
     $("#to-do-list, #doing-list, #backlog-list").droppable({
         drop: function(event, ui) {
+            updateStatus(event, ui)
             ui.draggable.removeClass("done-task").addClass("task-cards")
         }
     })
@@ -208,9 +202,36 @@ function initDragDrop() {
     //Making the done list droppable, and removes and adds class on dropped elements.
     $("#done-list").droppable({
         drop: function(event, ui) {
+            updateStatus(event, ui)
             ui.draggable.addClass("done-task").removeClass("task-cards")
         }
     })
+}
+
+function updateStatus(event, ui){
+    let draggedTaskId = $(ui.draggable[0]).data('id')
+    let targetList = $(event.target).attr('id')
+    let status = ''
+    switch(targetList){
+        // Fall-through intended
+        case 'backlog-list':
+        case 'to-do-list':
+            status = 'todo'
+            break
+        case 'doing-list':
+            status = 'ongoing'    
+            break
+        case 'done-list':
+            status = 'done'
+            break
+        default:
+            throw 'Unknown list'
+    }
+    //TODO: Fix change of status
+    console.log('Status change not saved to object yet...')
+    // let task = app.taskService.getTaskById(draggedTaskId)
+    // task.setStatus(status)
+    // app.saveData()
 }
 
 function initSortable() {

@@ -18,8 +18,8 @@ export class Task {
         this.status = 'todo'
     }
 
-    setStatus = function(status){
-        switch(status){
+    setStatus = function (newStatus){
+        switch(newStatus){
             case 'todo':
             case 'ongoing':
             case 'done':
@@ -29,10 +29,11 @@ export class Task {
             default:
                 throw 'Use todo, ongoing or done for Task status'
         }
-        this.status = status
+        this.status = newStatus
     }
 
     addMember = (member) => this.members.push(member)
+
     removeMember = function(member) {
         let index = this.members.find(m => m.id === member.id).index
         if(index != undefined){

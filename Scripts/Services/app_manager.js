@@ -1,5 +1,7 @@
 import {MemberService} from './member_service.js'
 import {TaskService} from './task_service.js'
+import {Member} from '../Models/member.js';
+import {Task} from '../Models/task.js';
 
 export class AppManager {
     version = 1
@@ -24,9 +26,34 @@ export class AppManager {
             throw "Version of data does not match app version"
         }
 
-        // Update object data
+        // // Reconstruct objects from data
+        // for(let savedMember of data.memberService.members){
+        //     let member = new Member()
+        //     member.id = savedMember.id
+        //     member.username = savedMember.username
+        //     member.name = savedMember.name
+        //     this.memberService.addMember(member)
+        // }
+        // for(let savedTask of data.taskService.tasks){
+        //     let task = new Task()
+        //     task.id = savedTask.id
+        //     task.name = savedTask.name
+        //     task.description = savedTask.description
+        //     task.status = savedTask.status
+        //     task.deadline = savedTask.deadline
+        //     for(let savedMember of savedTask.members){
+        //         let member = new Member()
+        //         member.id = savedMember.id
+        //         member.username = savedMember.username
+        //         member.name = savedMember.name
+        //         task.members.push(member)
+        //     }
+        //     this.taskService.addTask(task)
+        // }
+
         this.memberService.members = data.memberService.members
         this.taskService.tasks = data.taskService.tasks
+
     }
     
     saveData = function() {

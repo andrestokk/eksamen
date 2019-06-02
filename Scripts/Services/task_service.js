@@ -29,6 +29,8 @@ export class TaskService {
         return highestId + 1
     }
 
+    getTaskById = (id) => this.tasks.find(t => t.id === id)
+
     getTasksByStatus = function(status){
         return this.tasks.filter(t => t.status === status)
     }

@@ -126,6 +126,7 @@ function wireUpEvents(){
             }
             let name = $("#input-task-name").val()
             let description = $("#input-task-desc").val()
+            //TODO: Remove hard coded magic number (id = "1")
             let task = new Task(1, name, description, member)
             app.taskService.addTask(task)
             app.saveData()

@@ -83,6 +83,7 @@ ul {
     font-size: 17px;
     border-radius: 25px;
     display: block;
+    right: 0;
 }
 
 .delete-task-button:hover {

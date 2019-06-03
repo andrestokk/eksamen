@@ -3,6 +3,7 @@
 body {
     background-color: #c2cfe0;
     overflow-x: hidden;
+    font-family: sans-serif;
 }
 
 #welcome-message {

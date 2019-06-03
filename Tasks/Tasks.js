@@ -39,9 +39,15 @@ function checkData(){
 }
 
 function displayData() {
-    let tasks = app.taskService.getTasksByStatus('todo')
+    listTasks('todo', '#backlog-list')
+    listTasks('ongoing', '#doing-list')
+    listTasks('done', '#done-list')
+}
+
+function listTasks(taskStatus, listSelector){
+    let tasks = app.taskService.getTasksByStatus(taskStatus)
     for (let task of tasks) {
-        createCard(task);
+        createCard(listSelector, task);
     }
 }
 
@@ -58,8 +64,8 @@ function cleanInput() {
 }
 
 //function for creating cards, with value and it creates a HTML template that is appended by a list.
-function createCard(task) {
-    $("#backlog-list").append(`
+function createCard(listSelector, task) {
+    $(listSelector).append(`
     <li class="task-cards" data-id="${task.id}">
     <article>
     <p class="delete-task-button">x</p>
@@ -127,11 +133,9 @@ function wireUpEvents() {
             }
             let name = $("#input-task-name").val()
             let description = $("#input-task-desc").val()
-            let task = new Task(name, description, member)
-            app.createNewTask(task)
+            let task = app.createNewTask(name, description, member)
             app.saveData()
-            createCard(task)
-            cleanInput()
+            createCard('#backlog-list', task)
             cleanInput()
         }
 

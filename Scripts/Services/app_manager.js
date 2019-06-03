@@ -61,6 +61,7 @@ export class AppManager {
         task.members = new Array(member)
         task.status = 'todo'
         this.taskService.tasks.push(task)
+        return task
     }
 
     saveData = function() {

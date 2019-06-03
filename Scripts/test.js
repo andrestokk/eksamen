@@ -6,10 +6,33 @@ import { AppManager } from './Services/app_manager.js';
 
 
 
-testAppManager()
+updateATaskFromAppManager()
+//testAppManager()
 //testLocalStorage()
 //testSetTaskStatus()
 //testMembersAndTasks()
+
+function updateATaskFromAppManager(){
+
+    // Initiate AppManager and LoadData (as e.g. Tasks.js for Tasks.html does)
+    let app = new AppManager()
+    app.loadData()
+    
+    // Get task after clicking edit
+    let task = app.taskService.getTaskById(1)
+    
+    // Get data to display in edit form
+    console.log(task.id)
+    console.log(task.name)
+    console.log(task.description)
+    //etc...
+
+    // Update task with new data from form
+    task.description = 'Bedre beskrivelse'
+    
+    // Save updated task
+    app.saveData()
+}
 
 
 function testAppManager() {

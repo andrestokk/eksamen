@@ -26,7 +26,10 @@
 
     <div>
         <header id="header-container">
-            <h1 id="project-name"> Prosjekt navn</h1>
+            <div class="logo-wrap">
+                <img class="logo" src="../Images/vane.png" alt="Logo that says Vane">
+            </div>
+            <h1 id="project-name"></h1>
 
         </header>
     </div>
@@ -47,7 +50,6 @@
             <a href="#">Contacts</a>
             <a href="#">Members</a>
             <a href="#">Add members</a>
-            <div id="addmembers">add members</div>
         </div>
     </nav>
 
@@ -65,7 +67,9 @@
                 <h3 id="hearder-newCard"> Enter the fields below to create a new task</h3>
                 <input id="input-task-name" class="task-fields" type="text" placeholder="Task name">
                 <textarea id="input-task-desc" class="task-fields" rows="1" cols="25s" placeholder="Task description"></textarea>
-                <input id="input-task-point" class="task-fields" type="email" placeholder="Email or username">
+                <select id="input-task-point" class="task-fields">
+                    <option val="0">&lt;Select member&gt;</option>
+                </select>
                 <input id="task-modal-button" type="button" value="add task">
                 <p id="task-errormessage"></p>
 

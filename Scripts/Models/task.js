@@ -8,14 +8,8 @@ export class Task {
     deadline
     members
 
-    constructor(name, description, member){
-        let appManager = new AppManager()
-        appManager.loadData()
-        this.id = appManager.taskService.getNextTaskId()
-        this.name = name
-        this.description = description
-        this.members = new Array(member)
-        this.status = 'todo'
+    constructor(){
+        this.members = new Array()
     }
 
     setStatus = function (newStatus){

@@ -39,9 +39,21 @@ function checkData(){
 }
 
 function displayData() {
-    let tasks = app.taskService.getTasksByStatus('todo')
+    listTasks('todo', '#backlog-list')
+    listTasks('ongoing', '#doing-list')
+    listTasks('done', '#done-list')
+    let memberSelect = $('#input-task-point')
+    for(let member of app.memberService.members){
+        let option = $('<option>')
+        option.val(member.username).text(member.name)
+        memberSelect.append(option)
+    }
+}
+
+function listTasks(taskStatus, listSelector){
+    let tasks = app.taskService.getTasksByStatus(taskStatus)
     for (let task of tasks) {
-        createCard(task);
+        createCard(listSelector, task);
     }
 }
 
@@ -58,8 +70,8 @@ function cleanInput() {
 }
 
 //function for creating cards, with value and it creates a HTML template that is appended by a list.
-function createCard(task) {
-    $("#backlog-list").append(`
+function createCard(listSelector, task) {
+    $(listSelector).append(`
     <li class="task-cards" data-id="${task.id}">
     <article>
     <p class="delete-task-button">x</p>
@@ -122,16 +134,14 @@ function wireUpEvents() {
             let member = app.memberService.getByUsername(username)
             if (member == undefined) {
                 $("#task-errormessage").show()
-                $("#task-errormessage").html("Could not find member with that username")
+                $("#task-errormessage").html("Please select a member")
                 return
             }
             let name = $("#input-task-name").val()
             let description = $("#input-task-desc").val()
-            let task = new Task(name, description, member)
-            app.taskService.addTask(task)
+            let task = app.createNewTask(name, description, member)
             app.saveData()
-            createCard(task)
-            cleanInput()
+            createCard('#backlog-list', task)
             cleanInput()
         }
 
@@ -144,7 +154,12 @@ function wireUpEvents() {
 
     //An onclick function with self made animation for deleting a specific card
     $(document).on("click", ".delete-task-button", function() {
-        $(this).closest(".task-cards, .done-task").animate({
+        let card = $(this).closest(".task-cards, .done-task")
+        let taskId = card.data('id')
+        app.taskService.deleteTaskById(taskId)
+        app.saveData()
+
+        card.animate({
             width: "toggle",
             height: "toggle"
         }, {
@@ -227,11 +242,9 @@ function updateStatus(event, ui){
         default:
             throw 'Unknown list'
     }
-    //TODO: Fix change of status
-    console.log('Status change not saved to object yet...')
-    // let task = app.taskService.getTaskById(draggedTaskId)
-    // task.setStatus(status)
-    // app.saveData()
+    let task = app.taskService.getTaskById(draggedTaskId)
+    task.setStatus(status)
+    app.saveData()
 }
 
 function initSortable() {

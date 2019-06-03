@@ -4,6 +4,7 @@ body {
     background-color: #c2cfe0;
     overflow-x: hidden;
     font-family: sans-serif;
+    font-weight: bold;
 }
 
 #welcome-message {
@@ -107,11 +108,7 @@ ul {
     min-height: 10px;
     margin: 20px 0px 20px 0px;
     text-align: center;
-    -webkit-box-shadow: 32px 31px 45px -8px rgba(51, 77, 110, 1);
-    -moz-box-shadow: 32px 31px 45px -8px rgba(51, 77, 110, 1);
-    box-shadow: 32px 31px 45px -8px rgba(51, 77, 110, 1);
     border: none;
-    border-radius: 25px;
 }
 
 #task-modal {

@@ -128,7 +128,7 @@ function wireUpEvents() {
             let name = $("#input-task-name").val()
             let description = $("#input-task-desc").val()
             let task = new Task(name, description, member)
-            app.taskService.addTask(task)
+            app.createNewTask(task)
             app.saveData()
             createCard(task)
             cleanInput()
@@ -229,7 +229,8 @@ function updateStatus(event, ui){
     }
     //TODO: Fix change of status
     console.log('Status change not saved to object yet...')
-    // let task = app.taskService.getTaskById(draggedTaskId)
+    let task = app.taskService.getTaskById(draggedTaskId)
+    task.printName()
     // task.setStatus(status)
     // app.saveData()
 }

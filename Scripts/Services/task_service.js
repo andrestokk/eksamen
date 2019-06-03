@@ -8,8 +8,6 @@ export class TaskService {
         this.tasks = new Array()
     }
 
-    addTask = (task) => this.tasks.push(task)
-
     deleteTask = function(task) {
         let index = this.tasks.find(t => t.id === task.id).index
         if(index != undefined) {

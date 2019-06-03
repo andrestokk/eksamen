@@ -9,8 +9,15 @@ export class TaskService {
     }
 
     deleteTask = function(task) {
-        let index = this.tasks.find(t => t.id === task.id).index
-        if(index != undefined) {
+        let index = this.tasks.findIndex(t => t.id === task.id)
+        if(index != -1) {
+            this.tasks.splice(index, 1)
+        }
+    }
+    
+    deleteTaskById = function(taskId) {
+        let index = this.tasks.findIndex(t => t.id === taskId)
+        if(index != -1) {
             this.tasks.splice(index, 1)
         }
     }

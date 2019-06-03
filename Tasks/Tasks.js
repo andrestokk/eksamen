@@ -148,7 +148,12 @@ function wireUpEvents() {
 
     //An onclick function with self made animation for deleting a specific card
     $(document).on("click", ".delete-task-button", function() {
-        $(this).closest(".task-cards, .done-task").animate({
+        let card = $(this).closest(".task-cards, .done-task")
+        let taskId = card.data('id')
+        app.taskService.deleteTaskById(taskId)
+        app.saveData()
+        
+        card.animate({
             width: "toggle",
             height: "toggle"
         }, {

@@ -61,15 +61,13 @@ ul {
 
 #input-task-name {
     font-size: 17px;
-    border-radius: 25px;
 }
 
 #input-task-desc {
     height: 100px;
     text-align: left;
     font-size: 17px;
-    border-radius: 25;
-    display: block;
+    font-family: sans-serif;
 }
 
 .-button {

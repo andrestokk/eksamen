@@ -4,7 +4,6 @@ body {
     background-color: #c2cfe0;
     overflow-x: hidden;
     font-family: sans-serif;
-    font-weight: bold;
 }
 
 #welcome-message {
@@ -62,7 +61,6 @@ ul {
 }
 
 #input-task-name {
-    font-family: verdana;
     font-size: 17px;
     border-radius: 25px;
 }
@@ -70,7 +68,6 @@ ul {
 #input-task-desc {
     height: 100px;
     text-align: left;
-    font-family: verdana;
     font-size: 17px;
     border-radius: 25;
     display: block;
@@ -83,7 +80,6 @@ ul {
 }
 
 #delete-task-button {
-    font-family: verdana;
     font-size: 17px;
     border-radius: 25px;
     display: block;
@@ -202,6 +198,5 @@ nav,
 
 /* TODO: check "hearder" */
 #hearder-newCard {
-    font-family: verdana;
     font-size: 17px;
 }

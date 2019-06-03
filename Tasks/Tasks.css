@@ -95,16 +95,16 @@ ul {
 
 .done-task {
     background-color: rgb(49, 197, 64);
+    text-align: center;
 }
 
 .task-cards {
     background-color:#FFFFFF;
-    border-style: solid;
+    border-style: 1px solid black;
     height: auto;
     min-height: 10px;
     margin: 20px 0px 20px 0px;
     text-align: center;
-    border: none;
 }
 
 #task-modal {

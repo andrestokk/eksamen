@@ -23,7 +23,6 @@ body {
 
 .task-container {
     min-height: 800px;
-    border-style: solid;
     grid-column: auto / span 2;
     margin: 0 5px 0 5px;
 }

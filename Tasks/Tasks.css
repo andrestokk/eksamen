@@ -118,10 +118,15 @@ ul {
     position: relative;
     height: 40px;
     width: 40px;
-    font-size: 35px;
+    font-size: 30px;
     margin: 0;
     padding: 0;
     border: 0;
+    background-color: #f8f8f8;
+}
+
+#open-task-modal-button:hover{
+    cursor: pointer;
 }
 
 

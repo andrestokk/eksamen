@@ -227,12 +227,9 @@ function updateStatus(event, ui){
         default:
             throw 'Unknown list'
     }
-    //TODO: Fix change of status
-    console.log('Status change not saved to object yet...')
     let task = app.taskService.getTaskById(draggedTaskId)
-    task.printName()
-    // task.setStatus(status)
-    // app.saveData()
+    task.setStatus(status)
+    app.saveData()
 }
 
 function initSortable() {

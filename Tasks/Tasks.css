@@ -1,14 +1,14 @@
 /*Just some CSS to show that we can link it*/
 
 body {
-    background-color: #c2cfe0;
+    background-color: #F8F8F8;
     overflow-x: hidden;
     font-family: sans-serif;
 }
 
 #welcome-message {
     text-align: center;
-    color: black;
+    color: #334D6E;
 }
 
 #project-name {
@@ -94,11 +94,11 @@ ul {
 }
 
 .done-task {
-    background-color: #31D843;
+    background-color: rgb(49, 197, 64);
 }
 
 .task-cards {
-    background-color: rgb(255, 255, 255);
+    background-color:#FFFFFF;
     border-style: solid;
     height: auto;
     min-height: 10px;
@@ -108,7 +108,7 @@ ul {
 }
 
 #task-modal {
-    background-color: #f0f0f0;
+    background-color: #FFFFFF;
     width: 50px;
     border-radius: 2px;
     font-size: 17px;
@@ -147,7 +147,7 @@ ul {
 }
 
 nav {
-    background-color: #C2CFE0;
+    background-color: #FFFFFF;
     display: inline-block;
     position: absolute;
     top: 0;
@@ -179,7 +179,7 @@ nav a {
 }
 
 nav a:hover {
-    color: rgb(17, 104, 131);
+    color:#109CF1;
 }
 
 nav,

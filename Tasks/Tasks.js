@@ -42,6 +42,12 @@ function displayData() {
     listTasks('todo', '#backlog-list')
     listTasks('ongoing', '#doing-list')
     listTasks('done', '#done-list')
+    let memberSelect = $('#input-task-point')
+    for(let member of app.memberService.members){
+        let option = $('<option>')
+        option.val(member.username).text(member.name)
+        memberSelect.append(option)
+    }
 }
 
 function listTasks(taskStatus, listSelector){
@@ -128,7 +134,7 @@ function wireUpEvents() {
             let member = app.memberService.getByUsername(username)
             if (member == undefined) {
                 $("#task-errormessage").show()
-                $("#task-errormessage").html("Could not find member with that username")
+                $("#task-errormessage").html("Please select a member")
                 return
             }
             let name = $("#input-task-name").val()
@@ -152,7 +158,7 @@ function wireUpEvents() {
         let taskId = card.data('id')
         app.taskService.deleteTaskById(taskId)
         app.saveData()
-        
+
         card.animate({
             width: "toggle",
             height: "toggle"

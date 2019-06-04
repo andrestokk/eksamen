@@ -25,12 +25,13 @@ body {
     min-height: 800px;
     grid-column: auto / span 2;
     margin: 0 5px 0 5px;
-    font-size: 22px;
+    font-size: 17px;
 }
 
 .container-names{
     text-align: center;
     color: #334D6E;
+    font-size: 30px;
 }
 
 #project-name-errormessage {
@@ -45,7 +46,6 @@ body {
 
 ul {
     list-style: none;
-    padding: 0;
     min-height: 800px;
 }
 
@@ -77,33 +77,55 @@ ul {
     margin: 0px 15px 0px 0px;
 }
 
-#delete-task-button {
-    font-size: 17px;
-    border-radius: 25px;
-    display: block;
-    right: 0;
+.delete-task-button {
+    position: relative;
+    color:#334D6E;
+    font-size: 20px;
+    left: 370px;
+    top: -60px;
 }
 
 .delete-task-button:hover {
     cursor: pointer;
+    color: red;
+}
+
+p.edit-button{
+    position: relative;
+    color:#334D6E;
+    font-size: 20px;
+    left: 370px;
+    top: -70px;
 }
 
 .edit-button:hover {
     cursor: pointer;
 }
 
+h3.task-text{
+    position: relative;
+    left: -150px;
+}
+
 .done-task {
-    background-color: rgb(49, 197, 64);
+    background-color: #FFFFFF;
     text-align: center;
+    border: 1.2px solid green;
+    width: 400px;
+    color: #334D6E;
+    margin: 20px 0px 20px 0px;
+
 }
 
 .task-cards {
     background-color:#FFFFFF;
     border: 1.2px solid rgb(223, 236, 239);
     height: auto;
+    width: 400px;
     min-height: 10px;
     margin: 20px 0px 20px 0px;
     text-align: center;
+    color: #334D6E;
 }
 
 #task-modal {
@@ -200,6 +222,7 @@ nav,
     -webkit-transform: translateX(250px);
     -ms-transform: translateX(250px);
     transform: translateX(250px);
+    z-index: 99;
 }
 
 /* TODO: check "hearder" */

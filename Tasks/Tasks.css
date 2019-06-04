@@ -29,6 +29,7 @@ body {
 }
 
 .container-names{
+    text-align: center;
     color: #334D6E;
 }
 
@@ -98,7 +99,7 @@ ul {
 
 .task-cards {
     background-color:#FFFFFF;
-    border-style: 1px solid black;
+    border: 1.2px solid rgb(223, 236, 239);
     height: auto;
     min-height: 10px;
     margin: 20px 0px 20px 0px;

@@ -222,6 +222,7 @@ nav,
     -webkit-transform: translateX(250px);
     -ms-transform: translateX(250px);
     transform: translateX(250px);
+    z-index: 99;
 }
 
 /* TODO: check "hearder" */

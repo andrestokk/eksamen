@@ -31,6 +31,7 @@ body {
 .container-names{
     text-align: center;
     color: #334D6E;
+    font-size: 25px;
 }
 
 #project-name-errormessage {

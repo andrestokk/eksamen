@@ -94,8 +94,10 @@ ul {
 }
 
 .done-task {
-    background-color: rgb(49, 197, 64);
+    background-color: #FFFFFF;
     text-align: center;
+    border: 1.2px solid green;
+
 }
 
 .task-cards {

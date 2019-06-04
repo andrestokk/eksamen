@@ -74,7 +74,7 @@ function createCard(listSelector, task) {
     $(listSelector).append(`
     <li class="task-cards" data-id="${task.id}">
     <article>
-    <p class="delete-task-button">X</p>
+    <p class="delete-task-button"> <i class="fa fa-trash"></i> </p>
     <p class="edit-button">edit</p>
 
         <h3 class="task-text">${task.name}</h3>

@@ -115,7 +115,7 @@ ul {
 
 #open-task-modal-button {
     border-radius: 100%;
-    position: relative;
+    position: absolute;
     height: 40px;
     width: 40px;
     font-size: 30px;
@@ -123,6 +123,8 @@ ul {
     padding: 0;
     border: 0;
     background-color: #f8f8f8;
+    left: 70px;
+    top: 8px;
 }
 
 #open-task-modal-button:hover{

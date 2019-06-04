@@ -158,7 +158,7 @@ nav {
     left: -250px;
     -webkit-transition: -webkit-transform 0.4s;
     transition: transform 0.4s;
-    box-shadow: 1px 10px 30px rgb(123, 149, 153);
+    box-shadow: 2px 0px 5px rgb(223, 236, 239);
 }
 
 nav .logo img {

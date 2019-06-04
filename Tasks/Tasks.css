@@ -102,6 +102,11 @@ p.edit-button{
     cursor: pointer;
 }
 
+h3.task-text{
+    position: relative;
+    left: -150px;
+}
+
 .done-task {
     background-color: #FFFFFF;
     text-align: center;

@@ -74,8 +74,8 @@ function createCard(listSelector, task) {
     $(listSelector).append(`
     <li class="task-cards" data-id="${task.id}">
     <article>
-    <p class="delete-task-button"> <i class="fa fa-trash"></i> </p>
-    <p class="edit-button"> <i class="fa fa-pencil-square-o" aria-hidden="true"> </i></p>
+    <p class="delete-task-button" style="width: 23px;"> <i class="fa fa-trash"></i> </p>
+    <p class="edit-button" style="width: 23px;"> <i class="fa fa-pencil-square-o" aria-hidden="true"> </i></p>
 
         <h3 class="task-text">${task.name}</h3>
         <p class="task-point">User: ${task.members[0].name}</p>

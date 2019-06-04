@@ -138,6 +138,8 @@ ul {
 
 .buttonicon:hover {
     cursor: pointer;
+    transform: rotate(90deg);
+    transition: 1.5s;
 }
 
 .buttonicon div {

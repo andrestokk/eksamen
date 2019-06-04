@@ -25,13 +25,13 @@ body {
     min-height: 800px;
     grid-column: auto / span 2;
     margin: 0 5px 0 5px;
-    font-size: 22px;
+    font-size: 17px;
 }
 
 .container-names{
     text-align: center;
     color: #334D6E;
-    font-size: 25px;
+    font-size: 30px;
 }
 
 #project-name-errormessage {
@@ -77,7 +77,7 @@ ul {
     margin: 0px 15px 0px 0px;
 }
 
-#delete-task-button {
+.delete-task-button {
     font-size: 17px;
     border-radius: 25px;
     display: block;

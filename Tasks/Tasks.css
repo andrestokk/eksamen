@@ -90,6 +90,14 @@ ul {
     color: red;
 }
 
+p.edit-button{
+    text-align: right;
+    padding-right: 10px;
+    position: relative;
+    color:#334D6E;
+    font-size: 20px;
+}
+
 .edit-button:hover {
     cursor: pointer;
 }

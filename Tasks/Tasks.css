@@ -25,10 +25,10 @@ body {
     min-height: 800px;
     grid-column: auto / span 2;
     margin: 0 5px 0 5px;
+    font-size: 22px;
 }
 
 .container-names{
-    text-align: center;
     color: #334D6E;
 }
 

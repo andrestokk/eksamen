@@ -127,11 +127,18 @@ h3.task-text {
     color: #334D6E;
 }
 
+#task-modal:focus {
+    outline: none;
+}
+
 #task-modal {
     background-color: #FFFFFF;
     width: 50px;
     font-size: 17px;
     display: block;
+    border: 1.2px solid rgb(223, 236, 239);
+    margin: 20px 0px 20px 0px;
+    outline: none;
 }
 
 #open-task-modal-button {
@@ -228,6 +235,7 @@ nav,
 #hearder-newCard {
     font-size: 17px;
     background-color: #FFFFFF;
+    color: #334D6E;
 }
 
 .logo-wrap {
@@ -239,5 +247,5 @@ nav,
     height: 20px;
     position: relative;
     left: 250px;
-    bottom: -255px;
+    bottom: -240px;
 }

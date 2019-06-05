@@ -234,7 +234,10 @@ nav,
     text-align: center
 }
 
-.ui-dialog {
-    width: 200PX;
-    background-color: white;
+.ui-dialog-titlebar.ui-corner-all.ui-widget-header.ui-helper-clearfix.ui-draggable-handle {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    left: 270px;
+    top: 25px;
 }

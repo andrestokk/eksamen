@@ -125,11 +125,11 @@ h3.task-text {
     color: #334D6E;
 }
 
-#task-modal:focus {
+#task-modal:focus, #task-modal-edit:focus {
     outline: none;
 }
 
-#task-modal {
+#task-modal, #task-modal-edit {
     background-color: #FFFFFF;
     width: 590px;
     font-size: 17px;

@@ -124,6 +124,12 @@ function wireUpEvents() {
 
     // Wire up event for opening edit dialog
     $("#main-page-container").on("click", ".edit-button", function() {
+        let taskId = $(this).closest('.task-cards').data('id')
+        let task = app.taskService.getTaskById(taskId)
+        $('#input-task-name-edit').val(task.name)
+        $('#input-task-desc-edit').val(task.description)
+        $('#input-task-point-edit').val(task.members[0].username)
+        $('#edit-task-id').val(task.id)
         $("#task-modal-edit").dialog("open")
         $("#task-edit-errormessage").hide()
     });

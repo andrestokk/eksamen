@@ -89,7 +89,7 @@
     <div id="task-modal" title="">
         <h3 id="hearder-newCard">Enter the fields below to create a new task</h3>
         <input id="input-task-name" class="task-fields" type="text" placeholder="Task name">
-        <textarea id="input-task-desc" class="task-fields" rows="1" cols="25s" placeholder="Task description, e.g. deadline"></textarea>
+        <textarea id="input-task-desc" class="task-fields" rows="5" cols="25" placeholder="Task description, e.g. deadline"></textarea>
         <select id="input-task-point" class="task-fields">
             <option val="0">&lt;Select member&gt;</option>
         </select>
@@ -100,11 +100,12 @@
     <div id="task-modal-edit" title="">
         <h3 id="hearder-newCard">Edit task</h3>
         <input id="input-task-name-edit" class="task-fields" type="text" placeholder="Task name">
-        <textarea id="input-task-desc-edit" class="task-fields" rows="1" cols="25s" placeholder="Task description, e.g. deadline"></textarea>
+        <textarea id="input-task-desc-edit" class="task-fields" rows="5" cols="25" placeholder="Task description, e.g. deadline"></textarea>
         <select id="input-task-point-edit" class="task-fields">
             <option val="0">&lt;Select member&gt;</option>
         </select>
-        <input id="task-modal-button-edit" type="button" value="Add task">
+        <input type="hidden" id="edit-task-id" value="0">
+        <input id="task-modal-button-edit" type="button" value="Save">
         <p id="task-edit-errormessage"></p>
     </div>
 

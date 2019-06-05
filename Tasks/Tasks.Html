@@ -6,17 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
     <title>Vane</title>
-    <link rel="stylesheet" href="jquery-3.3.1.min.js" type="text/css">
     <link rel="stylesheet" href="Tasks.css" type="text/css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
 
+    <!--START OF STARTUP DIALOG-->
     <div id="startup-dialog" title="Welcome to Kanban!">
-        <!--START OF STARTUP DIALOG-->
         <h2 class="welcome-message">Welcome</h2>
         <h3 class="welcome-message"></h3>Enter your project name below:</h3>
         <input id="input-project-name" type="text" placeholder="Project name..">
@@ -45,64 +42,61 @@
         <div></div>
     </div>
 
+    <!-- MENU (NOT YET IMPLEMENTED) -->
     <nav>
-        <div class="logo"><img src="http://lorempixel.com/128/128/animals/"></div>
+        <div class="logo">
+            <!-- Using lorempixel for rotating images -->
+            <img src="http://lorempixel.com/128/128/animals/">
+        </div>
         <div class="categories">
-            <a href="#">Prosjekter</a>
-            <a href="#">Oppgaver</a>
-            <a href="#">Email</a>
-            <a href="#">Kontakter</a>
-            <a href="#">Innstillinger</a>
-            <a href="#">Medlemmer</a>
+            <a href="#">Projects</a>
+            <a href="#">Tasks</a>
+            <a href="#">E-mail</a>
+            <a href="#">Contacts</a>
+            <a href="#">Settings</a>
+            <a href="#">Members</a>
         </div>
     </nav>
 
     <!-- END SIDE MENUBAR -->
+
+    <!-- START OF MAIN PAGE-->
     <main id="main-page-container">
-        <!-- START OF MAIN PAGE-->
 
-        <div id="backlog-container" class="task-container connectedSortable">
-            <!-- START OF TODO CONTAINER-->
-            <h3 class="container-names">To-do</h3>
-            <ul id="backlog-list" class="connectedSortable"></ul>
-            <div id="task-modal" title="">
-                <h3 id="hearder-newCard"> Enter the fields below to create a new task</h3>
-                <input id="input-task-name" class="task-fields" type="text" placeholder="Task name">
-                <textarea id="input-task-desc" class="task-fields" rows="1" cols="25s" placeholder="Task description, e.g. deadline"></textarea>
-                <select id="input-task-point" class="task-fields">
-                    <option val="0">&lt;Select member&gt;</option>
-                </select>
-                <input id="task-modal-button" type="button" value="Add task">
-                <p id="task-errormessage"></p>
-
-            </div>
-
-
-
+    <!-- START OF TODO CONTAINER-->
+    <div id="backlog-container" class="task-container connectedSortable">
+        <h3 class="container-names">To-do</h3>
+        <ul id="backlog-list" class="connectedSortable"></ul>
+        <div id="task-modal" title="">
+            <h3 id="hearder-newCard"> Enter the fields below to create a new task</h3>
+            <input id="input-task-name" class="task-fields" type="text" placeholder="Task name">
+            <textarea id="input-task-desc" class="task-fields" rows="1" cols="25s" placeholder="Task description, e.g. deadline"></textarea>
+            <select id="input-task-point" class="task-fields">
+                <option val="0">&lt;Select member&gt;</option>
+            </select>
+            <input id="task-modal-button" type="button" value="Add task">
+            <p id="task-errormessage"></p>
         </div>
+    </div>
 
+    <!-- START OF DOING CONTAINER-->
+    <div id="doing-container" class="task-container">
+        <h3 class="container-names">Doing</h3>
+        <ul id="doing-list" class="connectedSortable"></ul>
+    </div>
 
+    <!-- START OF DONE CONTAINER-->
+    <div id="done-container" class="task-container">
+        <h3 class="container-names">Done</h3>
+        <ul id="done-list" class="connectedSortable"></ul>
+    </div>
 
-        <div id="doing-container" class="task-container">
-            <!-- START OF DOING CONTAINER-->
-            <h3 class="container-names">Doing</h3>
-            <ul id="doing-list" class="connectedSortable"></ul>
-        </div>
+    <!-- END OF MAIN PAGE -->
 
-        <div id="done-container" class="task-container">
-            <!-- START OF DONE CONTAINER-->
-            <h3 class="container-names">Done</h3>
-            <ul id="done-list" class="connectedSortable"></ul>
-        </div>
-
-
-
-        <!-- END OF MAIN PAGE -->
-
-
+    <!-- SCRIPTS -->
+    <script src="../Scripts/libs/jquery-3.3.1.min.js"></script>
+    <script src="../Scripts/libs/jquery-ui.min.js"></script>
+    <script type="module" src="Tasks.js"></script>
 </body>
-<script src="../Scripts/libs/jquery-3.3.1.min.js"></script>
-<script src="../Scripts/libs/jquery-ui.min.js"></script>
-<script type="module" src="Tasks.js"></script>
 
 </html>

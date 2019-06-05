@@ -43,10 +43,12 @@ function displayData() {
     listTasks('ongoing', '#doing-list')
     listTasks('done', '#done-list')
     let memberSelect = $('#input-task-point')
+    let memberSelectEdit = $('#input-task-point-edit')
     for(let member of app.memberService.members){
         let option = $('<option>')
         option.val(member.username).text(member.name)
         memberSelect.append(option)
+        memberSelectEdit.append(option)
     }
 }
 
@@ -67,6 +69,13 @@ function cleanInput() {
     $("#input-task-desc").val("")
     $("#input-task-point").val("")
     $("#task-modal").dialog("close")
+}
+
+function cleanInputEdit() {
+    $("#input-task-name-edit").val("")
+    $("#input-task-desc-edit").val("")
+    $("#input-task-point-edit").val("")
+    $("#task-modal-edit").dialog("close")
 }
 
 //function for creating cards, with value and it creates a HTML template that is appended by a list.
@@ -107,10 +116,16 @@ function wireUpEvents() {
         toggleSidebar()
     })
 
-    //a function to make a dialog appear on button click
+    // Wire up event for opening create dialog
     $("#open-task-modal-button").on("click", function() {
         $("#task-modal").dialog("open")
         $("#task-errormessage").hide()
+    });
+
+    // Wire up event for opening edit dialog
+    $("#main-page-container").on("click", ".edit-button", function() {
+        $("#task-modal-edit").dialog("open")
+        $("#task-edit-errormessage").hide()
     });
 
     /*Functions to check if fields are filled, if not errormessage will appear.*/
@@ -188,8 +203,23 @@ function createDialogs() {
         }
     })
 
-    /* The task modal that opens when activated */
+    /* Modal dialog for creating new task */
     $("#task-modal").dialog({
+        modal: true,
+        height: 300,
+        width: 300,
+        autoOpen: false,
+        resizable: false,
+        show: {
+            effect: "fade"
+        },
+        hide: {
+            effect: "fade"
+        }
+    })
+
+    /* Modal dialog for editing tasks */
+    $("#task-modal-edit").dialog({
         modal: true,
         height: 300,
         width: 300,

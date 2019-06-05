@@ -238,6 +238,6 @@ nav,
     width: 20px;
     height: 20px;
     position: relative;
-    left: 270px;
-    top: 25px;
+    left: 250px;
+    bottom: -255px;
 }

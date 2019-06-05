@@ -28,7 +28,7 @@ body {
     font-size: 17px;
 }
 
-.container-names{
+.container-names {
     text-align: center;
     color: #334D6E;
     font-size: 30px;
@@ -79,7 +79,7 @@ ul {
 
 .delete-task-button {
     position: relative;
-    color:#334D6E;
+    color: #334D6E;
     font-size: 20px;
     left: 370px;
     top: -60px;
@@ -90,9 +90,9 @@ ul {
     color: red;
 }
 
-p.edit-button{
+p.edit-button {
     position: relative;
-    color:#334D6E;
+    color: #334D6E;
     font-size: 20px;
     left: 370px;
     top: -70px;
@@ -102,7 +102,7 @@ p.edit-button{
     cursor: pointer;
 }
 
-h3.task-text{
+h3.task-text {
     position: relative;
     left: -150px;
 }
@@ -114,11 +114,10 @@ h3.task-text{
     width: 400px;
     color: #334D6E;
     margin: 20px 0px 20px 0px;
-
 }
 
 .task-cards {
-    background-color:#FFFFFF;
+    background-color: #FFFFFF;
     border: 1.2px solid rgb(223, 236, 239);
     height: auto;
     width: 400px;
@@ -133,7 +132,6 @@ h3.task-text{
     width: 50px;
     font-size: 17px;
     display: block;
-    
 }
 
 #open-task-modal-button {
@@ -150,10 +148,9 @@ h3.task-text{
     top: 8px;
 }
 
-#open-task-modal-button:hover{
+#open-task-modal-button:hover {
     cursor: pointer;
 }
-
 
 .buttonicon {
     position: absolute;
@@ -208,7 +205,7 @@ nav a {
 }
 
 nav a:hover {
-    color:#109CF1;
+    color: #109CF1;
 }
 
 nav,
@@ -225,12 +222,19 @@ nav,
     z-index: 99;
 }
 
+
 /* TODO: check "hearder" */
+
 #hearder-newCard {
     font-size: 17px;
-    background-color:#FFFFFF;
+    background-color: #FFFFFF;
 }
 
 .logo-wrap {
     text-align: center
+}
+
+.ui-dialog {
+    width: 200PX;
+    background-color: white;
 }

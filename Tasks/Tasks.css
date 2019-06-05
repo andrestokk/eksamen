@@ -133,11 +133,15 @@ h3.task-text {
 
 #task-modal {
     background-color: #FFFFFF;
-    width: 50px;
+    width: 590px;
     font-size: 17px;
     display: block;
     border: 1.2px solid rgb(223, 236, 239);
     margin: 20px 0px 20px 0px;
+    outline: none;
+}
+
+*:focus {
     outline: none;
 }
 

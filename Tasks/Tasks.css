@@ -1,5 +1,3 @@
-/*Just some CSS to show that we can link it*/
-
 body {
     background-color: #F8F8F8;
     overflow-x: hidden;
@@ -232,9 +230,6 @@ nav,
     transform: translateX(250px);
     z-index: 99;
 }
-
-
-/* TODO: check "hearder" */
 
 #hearder-newCard {
     font-size: 17px;

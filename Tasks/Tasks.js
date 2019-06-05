@@ -72,6 +72,7 @@ function cleanInput() {
 }
 
 function cleanInputEdit() {
+    $('#edit-task-id').val("")
     $("#input-task-name-edit").val("")
     $("#input-task-desc-edit").val("")
     $("#input-task-point-edit").val("")
@@ -167,6 +168,26 @@ function wireUpEvents() {
         }
 
     });
+
+    // Saving edited task
+    $('#task-modal-button-edit').click(function(){
+        // Need to use parseInt as TaskService's getTaskById uses strict equality (triple equals)
+        let taskId = parseInt($('#edit-task-id').val())
+        // Get task from TaskService
+        let task = app.taskService.getTaskById(parseInt(taskId))
+        // Update task with data from form
+        task.name = $('#input-task-name-edit').val()
+        task.description = $('#input-task-desc-edit').val()
+        task.members[0] = app.memberService.getByUsername($('#input-task-point-edit').val())
+        // Save card data
+        app.saveData()
+        // Update card (data) in list
+        let listCard = $('li.task-cards[data-id="' + task.id + '"]')
+        listCard.find('.task-point').text('User: ' + task.members[0].name)
+        listCard.find('.task-text').text(task.name)
+        listCard.find('.task-desc').text(task.description)
+        cleanInputEdit()
+    })
 
     //Function for toggeling on and off description on each card.
     $(document).on("click", ".read-more", function() {

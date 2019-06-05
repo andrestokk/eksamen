@@ -67,16 +67,6 @@
     <div id="backlog-container" class="task-container connectedSortable">
         <h3 class="container-names">To-do</h3>
         <ul id="backlog-list" class="connectedSortable"></ul>
-        <div id="task-modal" title="">
-            <h3 id="hearder-newCard"> Enter the fields below to create a new task</h3>
-            <input id="input-task-name" class="task-fields" type="text" placeholder="Task name">
-            <textarea id="input-task-desc" class="task-fields" rows="1" cols="25s" placeholder="Task description, e.g. deadline"></textarea>
-            <select id="input-task-point" class="task-fields">
-                <option val="0">&lt;Select member&gt;</option>
-            </select>
-            <input id="task-modal-button" type="button" value="Add task">
-            <p id="task-errormessage"></p>
-        </div>
     </div>
 
     <!-- START OF DOING CONTAINER-->
@@ -92,6 +82,32 @@
     </div>
 
     <!-- END OF MAIN PAGE -->
+
+
+    <!-- DIALOGS -->
+    <!-- New Card Dialog -->
+    <div id="task-modal" title="">
+        <h3 id="hearder-newCard">Enter the fields below to create a new task</h3>
+        <input id="input-task-name" class="task-fields" type="text" placeholder="Task name">
+        <textarea id="input-task-desc" class="task-fields" rows="1" cols="25s" placeholder="Task description, e.g. deadline"></textarea>
+        <select id="input-task-point" class="task-fields">
+            <option val="0">&lt;Select member&gt;</option>
+        </select>
+        <input id="task-modal-button" type="button" value="Add task">
+        <p id="task-errormessage"></p>
+    </div>
+    <!-- New Card Dialog -->
+    <div id="task-modal-edit" title="">
+        <h3 id="hearder-newCard">Edit task</h3>
+        <input id="input-task-name-edit" class="task-fields" type="text" placeholder="Task name">
+        <textarea id="input-task-desc-edit" class="task-fields" rows="1" cols="25s" placeholder="Task description, e.g. deadline"></textarea>
+        <select id="input-task-point-edit" class="task-fields">
+            <option val="0">&lt;Select member&gt;</option>
+        </select>
+        <input id="task-modal-button-edit" type="button" value="Add task">
+        <p id="task-edit-errormessage"></p>
+    </div>
+
 
     <!-- SCRIPTS -->
     <script src="../Scripts/libs/jquery-3.3.1.min.js"></script>

@@ -1,5 +1,4 @@
 import { AppManager } from '../Scripts/Services/app_manager.js'
-import { Task } from '../Scripts/Models/task.js'
 
 let app = new AppManager()
 
@@ -47,8 +46,8 @@ function displayData() {
     for(let member of app.memberService.members){
         let option = $('<option>')
         option.val(member.username).text(member.name)
-        memberSelect.append(option)
-        memberSelectEdit.append(option)
+        memberSelect.append(option.clone())
+        memberSelectEdit.append(option.clone())
     }
 }
 
